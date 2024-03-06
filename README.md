@@ -1,2 +1,3 @@
 - 👋 Hi, I’m Sudarshan Mhasrup and I'm a student of Computer Science and Engineering.
+- 🎓 I have done diploma in Computer Engineering and currently pursuing B.Tech in Computer Science and Engineering.
 - Follow me on LinkedIn: @sudarshanmhasrup
