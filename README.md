@@ -1,6 +1,6 @@
 ## Hey there, This is Sudarshan here. 👋
 - 📚 I'm a student of Computer Science and Engineering.
-- 🖥️ I like to code and buildsoftwares.
+- 🖥️ I like to code and build softwares.
 - 🌱 I’m currently learning Kotlin programming language.'
 - 👯 I’m looking to collaborate on Android projects.
 ### About myself
