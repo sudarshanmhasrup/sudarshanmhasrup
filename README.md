@@ -3,6 +3,8 @@
 - 🖥️ I like to code and buildsoftwares.
 - 🌱 I’m currently learning Kotlin programming language.'
 - 👯 I’m looking to collaborate on Android projects.
+### About myself
+Hey there, I'm a student of Computer Science and Engineering who likes to code and build software. 💫 I enjoying writing code and designing softwares.
 <!--
 **sudarshanmhasrup/sudarshanmhasrup** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
