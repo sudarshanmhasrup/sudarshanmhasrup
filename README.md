@@ -1,5 +1,7 @@
 ## Hey there, This is Sudarshan here. 👋
-
+- 📚 I'm a student of Computer Science and Engineering.
+- 🖥️ I like to code and build softwares.
+- 🌱 I’m currently learning Kotlin programming language.
 <!--
 **sudarshanmhasrup/sudarshanmhasrup** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
