@@ -1,4 +1,6 @@
-## Hey there, This is Sudarshan here. 👋
+## Hey, I'm Sudarshan!👋
+Talking about me, I'm a student of Computer Science and Engineering, and I like to build and develop software. I like to develop web-based, desktop-based, and console-based projects, but my primary interest lies in Android as well as mobile app development. Talking about my go-to and favorite language, it's Kotlin. 
+
 - 📚 I'm a student of Computer Science and Engineering.
 - 🖥️ I like to code and build softwares.
 - 🌱 I’m currently learning Kotlin and Jetpack Compose.
@@ -6,5 +8,3 @@
 - 📫 Contact me Via E-mail: sudarshanmhasrup@gmail.com
 - 🛜 I'm also active on the Internet as "WeNorch".
 - 💬 Ask me about: Jetpack Compose, Kotlin and Java.
-### About myself
-Hey there, I'm a student of Computer Science and Engineering who likes to code and build software. I enjoy writing code and designing software. We can work together on a project if you know JavaScript, Kotlin, or Java. I'm always into Jetpack Compose, so we can also collaborate on Android projects. You can contact me with my E-mail: sudarshanmhasrup@gmail.com
