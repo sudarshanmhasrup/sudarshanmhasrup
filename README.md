@@ -6,7 +6,7 @@ When I was in the 10th standard, I got to know about the Sketchware app, a no-co
 - 🌱 Technologies I'm exploring right now: Kotlin, Jetpack Compose, Spring Boot using Kotlin, and PostgreSQL.
 - 🎓 My education qualification: I have completed my diploma in computer engineering and am currently studying in the 3rd year of B.Tech in computer science and engineering. 
 - ⚡ Fun fact: I'm also into music production and writing songs.
-- 📫 How to reach me: It's so easy. Just write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com) or send me a message on my (LinkedIn)[https://www.linkedin.com/in/sudarshanmhasrup2).
+- 📫 How to reach me: It's so easy. Just write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com) or send me a message on my [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup2).
 
 <!--
 **sudarshanmhasrup/sudarshanmhasrup** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
