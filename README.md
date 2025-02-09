@@ -3,8 +3,10 @@ I'm a software developer who likes to code and enjoys designing and developing s
 
 When I was in the 10th standard, I got to know about the Sketchware app, a no-code tool that we can use to develop mobile apps using the mobile phone itself. I developed some toy projects back then and realized what I like doing. After completing my school, I quickly decided to pursue a diploma in computer engineering. From then on, I'm learning how to code and build software that can solve a problem or make somebody's life easier through software.
 
-- 📫 How to reach me: It's so easy. Just write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com) or send me a message on my (LinkedIn)[https://www.linkedin.com/in/sudarshanmhasrup2).
-- ⚡ Fun fact: I'm also into music production and writing songs.
+🎓 My education qualification: I have completed my diploma in computer engineering and am currently studying in the 3rd year of B.Tech in computer science and engineering. <br>
+⚡ Fun fact: I'm also into music production and writing songs. <br>
+📫 How to reach me: It's so easy. Just write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com) or send me a message on my (LinkedIn)[https://www.linkedin.com/in/sudarshanmhasrup2).
+
 <!--
 **sudarshanmhasrup/sudarshanmhasrup** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
