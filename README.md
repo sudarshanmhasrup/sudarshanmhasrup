@@ -1,5 +1,5 @@
 ### Hey there, This is Sudarshan here!👋
-
+Hey, I'm Sudarshan Mhasrup, and I'm a software developer who likes to code and enjoys designing and developing software. I started my journey as a Sketchware developer and moved on to the field of Android app development. I'm currently exploring Android app development using Kotlin and Jetpack Compose.
 <!--
 **sudarshanmhasrup/sudarshanmhasrup** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
