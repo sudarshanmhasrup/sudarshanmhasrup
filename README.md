@@ -10,8 +10,3 @@ When I was in the 10th standard, I got to know about the Sketchware app, a no-co
 - 📫 How to reach me: It's so easy. Just write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com) or send me a message on my [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup2).
 
 If you are up for collaborating on projects related to Kotlin & Jetpack Compose, Compose for Desktop, I'm always up for it. Feel free to contact me.
-
-### My technology stack
-Here is a list of the technologies I know, and I use quite often and regularly.
-
-<img src="assets/techstack_container.svg" height="80" alt="Kotlin programming language">
