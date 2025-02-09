@@ -12,3 +12,4 @@ When I was in the 10th standard, I got to know about the Sketchware app, a no-co
 If you are up for collaborating on projects related to Kotlin & Jetpack Compose, Compose for Desktop, I'm always up for it. Feel free to contact me.
 
 ### My technology stack
+Here is a list of the technologies I know, and I use quite often and regularly.
