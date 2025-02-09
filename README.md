@@ -13,3 +13,6 @@ If you are up for collaborating on projects related to Kotlin & Jetpack Compose,
 
 ### My technology stack
 Here is a list of the technologies I know, and I use quite often and regularly.
+
+<img src="assets/ic_kotlin_full_logo.svg" width="80" height="80" alt="Kotlin programming language"> 
+<img src="assets/ic_jetpack_compose_full_logo.svg" width="80" height="80" alt="Kotlin programming language">
