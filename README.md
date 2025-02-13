@@ -13,3 +13,6 @@ If you are up for collaborating on projects related to Kotlin & Jetpack Compose,
 
 ### Learn and fun
 The best way to learn any technology is by learning the basics and jumping on to build projects in it. Here is a list of repositories I created while learning particular technologies such as languages, frameworks, etc.
+
+#### Exploring the world of Kotlin
+This repository contains all the content related to Kotlin programming language. It contains everything from console programs to a backend totally written in Kotlin. [View repository](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin.git)
