@@ -1,8 +1,8 @@
 <!--suppress ALL -->
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/banner-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/banner-light.svg" />
-    <img alt="Banner" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/banner-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/banner-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/banner-light.svg" />
+    <img alt="Banner" src="/assets/banner-dark.svg" />
 </picture><br><br>
 
 ### Introduction 👋
@@ -25,23 +25,23 @@ conversation, feel free to email me at [sudarshanmhasrup@gmail.com](mailto://sud
 You can also follow me on other social media platforms to see more of my work.
 
 <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
-    <img alt="LinkedIn Logo" height="40" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/linkedin-logo.svg" />
+    <img alt="LinkedIn Logo" height="40" src="/assets/linkedin-logo.svg" />
 </a>
 
 <a href="https://www.instagram.com/sudarshanmhasrup/" target="_blank" style="text-decoration:none;">
-    <img alt="Instagram Logo" height="40" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/instagram-logo.svg" hspace="20" />
+    <img alt="Instagram Logo" height="40" src="/assets/instagram-logo.svg" hspace="20" />
 </a>
 
 <a href="https://www.threads.com/@sudarshanmhasrup" target="_blank" style="margin-right:20px;">
-    <img alt="Threads Logo" height="40" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/threads-logo.svg" />
+    <img alt="Threads Logo" height="40" src="/assets/threads-logo.svg" />
 </a>
 
 <a href="https://x.com/sudarshanmhasrup" target="_blank" style="margin-right:20px;">
-    <img alt="X Logo" height="40" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/x-logo.svg" hspace="20" />
+    <img alt="X Logo" height="40" src="/assets/x-logo.svg" hspace="20" />
 </a>
 
 <a href="https://www.reddit.com/user/sudarshanmhasrup/" target="_blank" style="margin-right:20px;">
-    <img alt="Reddit Logo" height="40" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/reddit-logo.svg" />
+    <img alt="Reddit Logo" height="40" src="/assets/reddit-logo.svg" />
 </a>
 
 ### Technology Tech
@@ -54,39 +54,39 @@ Here’s the list of technologies I use in my daily developer life.
 Here are the technologies I use to build cross-platform and native mobile apps.
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-multiplatform-logo-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-multiplatform-logo-light.svg" />
-    <img alt="Kotlin Multiplatform Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-multiplatform-logo-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/kotlin-multiplatform-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-multiplatform-logo-light.svg" />
+    <img alt="Kotlin Multiplatform Logo" height="88" src="/assets/kotlin-multiplatform-logo-dark.svg" />
 </picture>
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/compose-multiplatform-logo_dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/compose-multiplatform-logo_light.svg" />
-    <img alt="Compose Multiplatform Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/compose-multiplatform-logo_dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/compose-multiplatform-logo_dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/compose-multiplatform-logo_light.svg" />
+    <img alt="Compose Multiplatform Logo" height="88" src="/assets/compose-multiplatform-logo_dark.svg" />
 </picture>
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-logo-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-logo-light.svg" />
-    <img alt="Kotlin Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/kotlin-logo-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/kotlin-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-logo-light.svg" />
+    <img alt="Kotlin Logo" height="88" src="/assets/kotlin-logo-dark.svg" />
 </picture>
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/jetpack-compose-logo-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/jetpack-compose-logo-light.svg" />
-    <img alt="Jetpack Compose Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/jetpack-compose-logo-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/jetpack-compose-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/jetpack-compose-logo-light.svg" />
+    <img alt="Jetpack Compose Logo" height="88" src="/assets/jetpack-compose-logo-dark.svg" />
 </picture>
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-logo-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-logo-light.svg" />
-    <img alt="Swift Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-logo-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/swift-logo-light.svg" />
+    <img alt="Swift Logo" height="88" src="/assets/swift-logo-dark.svg" />
 </picture>
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-ui-logo-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-ui-logo-light.svg" />
-    <img alt="Swift UI Logo" height="88" src="https://github.com/sudarshanmhasrup/sudarshanmhasrup/blob/main/assets/swift-ui-logo-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-ui-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/swift-ui-logo-light.svg" />
+    <img alt="Swift UI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
 </picture>
 
 <picture>
@@ -184,7 +184,7 @@ Here are the tools and IDEs I use to build and test software.
 ### Learn and fun
 
 The best way to learn any technology is by experimenting with it. Whenever I start learning new technology, I create a
-dedicated repository for it, so I can experiment with it. like exploring the syntax of programming languages, features,
+dedicated repository for it, so I can experiment with it. Like exploring the syntax of programming languages, features,
 libraries, frameworks built around that technology, etc. Here’s the list of all the repositories I’ve created while
 learning new technologies:
 
