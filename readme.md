@@ -205,7 +205,7 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 
 - Oh, come on. Do you even need to guess this? It's Kotlin.
 
-**3) What's my favorite UI toolkit?** 0
+**3) What's my favorite UI toolkit?** 
 
 - Compose. I really love and enjoy building UI with Compose.
 
@@ -213,6 +213,6 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 
 - Gradle, anytime.
 
-**5) Whose music do you enjoy the most?**
+**5) Whose music do I enjoy the most?**
 
 - Fly By Midnight, haha.
