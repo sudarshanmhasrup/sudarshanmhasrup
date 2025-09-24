@@ -36,11 +36,11 @@ You can also follow me on other social media platforms to see more of my work.
     <img alt="Threads Logo" height="40" src="/assets/threads-logo.svg" />
 </a>
 
-<a href="https://x.com/sudarshanmhasrup" target="_blank" style="margin-right:20px;">
+<a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
     <img alt="X Logo" height="40" src="/assets/x-logo.svg" hspace="20" />
 </a>
 
-<a href="https://www.reddit.com/user/sudarshanmhasrup/" target="_blank" style="margin-right:20px;">
+<a href="https://www.reddit.com/user/heyysudarshan/" target="_blank" style="margin-right:20px;">
     <img alt="Reddit Logo" height="40" src="/assets/reddit-logo.svg" />
 </a>
 
