@@ -44,7 +44,7 @@ You can also follow me on other social media platforms to see more of my work.
     <img alt="Reddit Logo" height="40" src="/assets/reddit-logo.svg" />
 </a>
 
-### Technology Tech
+### Technology Stack
 
 Do you want to know the technology stack I use for writing and developing software? Don’t worry, I’ve got you covered.
 Here’s the list of technologies I use in my daily developer life.
