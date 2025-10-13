@@ -53,6 +53,18 @@ Here are the technologies I use to build cross-platform and native mobile apps.
     <img alt="Jetpack Compose Logo" height="88" src="/assets/jetpack-compose-logo-dark.svg" />
 </picture>
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/swift-logo-light.svg" />
+    <img alt="Swift Logo" height="88" src="/assets/swift-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-ui-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/swift-ui-logo-light.svg" />
+    <img alt="Swift UI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
+</picture>
+
 ### Social Media
 
 You can also follow me on other social media platforms to see more of my work.
