@@ -1,6 +1,6 @@
 ### Open Source
 
-I love contributing to open-source projects and creating my own. Here are some of the open source projects I’ve created:
+I love contributing to open-source projects and creating my own. Here are some of the open-source projects I’ve created:
 
 - [Localina](https://github.com/sudarshanmhasrup/localina): A Kotlin Multiplatform library that supports real-time
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
@@ -13,7 +13,7 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 
 **1) What's my favorite IDE?**
 
-- Android Studio (Basically any IDE that uses IntelliJ IDEA as its foundation).
+- Android Studio (basically any IDE that uses IntelliJ IDEA as its foundation).
 
 **2) What's my favorite programming language?**
 
