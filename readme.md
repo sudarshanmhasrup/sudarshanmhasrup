@@ -22,6 +22,11 @@ I love contributing to open-source projects and creating my own. Here are some o
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
 
+### Technology Stack
+
+Do you want to know the technology stack I use for writing and developing software? Don’t worry, I’ve got you covered.
+Here’s the list of technologies I use in my daily developer life.
+
 ### Social Media
 
 You can also follow me on other social media platforms to see more of my work.
