@@ -2,6 +2,10 @@
 
 I love contributing to open-source projects and creating my own. Here are some of the open source projects I’ve created:
 
+- [Localina](https://github.com/sudarshanmhasrup/localina): A Kotlin Multiplatform library that supports real-time
+  locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
+  Multiplatform and handle locale changes seamlessly.
+
 ### QnA
 
 Do you want to know more about me? Don't worry: here are some questions and my answers, so you can see if we vibe as
