@@ -15,6 +15,30 @@ I love contributing to open-source projects and creating my own. Here are some o
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
 
+### Social Media
+
+You can also follow me on other social media platforms to see more of my work.
+
+<a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
+    <img alt="LinkedIn Logo" height="40" src="/assets/linkedin-logo.svg" />
+</a>
+
+<a href="https://www.instagram.com/sudarshanmhasrup/" target="_blank" style="text-decoration:none;">
+    <img alt="Instagram Logo" height="40" src="/assets/instagram-logo.svg" hspace="20" />
+</a>
+
+<a href="https://www.threads.com/@sudarshanmhasrup" target="_blank" style="margin-right:20px;">
+    <img alt="Threads Logo" height="40" src="/assets/threads-logo.svg" />
+</a>
+
+<a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
+    <img alt="X Logo" height="40" src="/assets/x-logo.svg" hspace="20" />
+</a>
+
+<a href="https://www.reddit.com/user/heyysudarshan/" target="_blank" style="margin-right:20px;">
+    <img alt="Reddit Logo" height="40" src="/assets/reddit-logo.svg" />
+</a>
+
 ### QnA
 
 Do you want to know more about me? Don't worry: here are some questions and my answers, so you can see if we vibe as
