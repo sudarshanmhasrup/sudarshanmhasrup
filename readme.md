@@ -22,10 +22,36 @@ I love contributing to open-source projects and creating my own. Here are some o
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
 
-### Technology Stack
-
 Do you want to know the technology stack I use for writing and developing software? Don’t worry, I’ve got you covered.
 Here’s the list of technologies I use in my daily developer life.
+
+#### Mobile App Development
+
+Here are the technologies I use to build cross-platform and native mobile apps.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/kotlin-multiplatform-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-multiplatform-logo-light.svg" />
+    <img alt="Kotlin Multiplatform Logo" height="88" src="/assets/kotlin-multiplatform-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/compose-multiplatform-logo_dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/compose-multiplatform-logo_light.svg" />
+    <img alt="Compose Multiplatform Logo" height="88" src="/assets/compose-multiplatform-logo_dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/kotlin-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/kotlin-logo-light.svg" />
+    <img alt="Kotlin Logo" height="88" src="/assets/kotlin-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/jetpack-compose-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/jetpack-compose-logo-light.svg" />
+    <img alt="Jetpack Compose Logo" height="88" src="/assets/jetpack-compose-logo-dark.svg" />
+</picture>
 
 ### Social Media
 
