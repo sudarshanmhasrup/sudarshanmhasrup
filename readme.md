@@ -14,3 +14,7 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 **3) What's my favorite UI toolkit?**
 
 - Compose. I really love and enjoy building UI with Compose.
+
+**4) What's my favorite build tool?**
+
+- Gradle, anytime.
