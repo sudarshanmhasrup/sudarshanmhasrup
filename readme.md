@@ -37,8 +37,8 @@ Here are the technologies I use to build cross-platform and native mobile apps.
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/compose-multiplatform-logo_dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="/assets/compose-multiplatform-logo_light.svg" />
-    <img alt="Compose Multiplatform Logo" height="88" src="/assets/compose-multiplatform-logo_dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/compose-multiplatform-logo-light.svg" />
+    <img alt="Compose Multiplatform Logo" height="88" src="/assets/compose-multiplatform-logo-dark.svg" />
 </picture>
 
 <picture>
