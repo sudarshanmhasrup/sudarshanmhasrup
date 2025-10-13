@@ -6,3 +6,7 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 **1) What's my favorite IDE?**
 
 - Android Studio (Basically any IDE that uses IntelliJ IDEA as its foundation).
+
+**2) What's my favorite programming language?**
+
+- Oh, come on. Do you even need to guess this? It's Kotlin.
