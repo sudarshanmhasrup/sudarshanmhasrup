@@ -10,3 +10,7 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 **2) What's my favorite programming language?**
 
 - Oh, come on. Do you even need to guess this? It's Kotlin.
+
+**3) What's my favorite UI toolkit?**
+
+- Compose. I really love and enjoy building UI with Compose.
