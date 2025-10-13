@@ -1,3 +1,7 @@
+### Open Source
+
+I love contributing to open-source projects and creating my own. Here are some of the open source projects I’ve created:
+
 ### QnA
 
 Do you want to know more about me? Don't worry: here are some questions and my answers, so you can see if we vibe as
