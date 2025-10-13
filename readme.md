@@ -30,3 +30,11 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 **5) Whose music do I enjoy the most?**
 
 - Fly By Midnight, haha.
+
+### Thanks for reading!
+
+I hope you enjoyed scrolling through my GitHub profile. If you're curious to know more about me, feel free to
+reach out to me on [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/),
+[Instagram](https://www.instagram.com/heyysudarshan), [X](https://x.com/heyysudarshan),
+[Threads](https://www.threads.com/@heyysudarshan), [Reddit](https://www.reddit.com/user/heyysudarshan/) or write me an
+email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com). I'd love to connect with you!
