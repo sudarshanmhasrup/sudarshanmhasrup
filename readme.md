@@ -1,3 +1,10 @@
+<!--suppress ALL -->
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/banner-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/banner-light.svg" />
+    <img alt="Banner" src="/assets/banner-dark.svg" />
+</picture><br><br>
+
 ### Introduction 👋
 
 Hi! I’m Sudarshan, a software developer from India who fell in love with Kotlin and enjoys building cross-platform and
