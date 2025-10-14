@@ -101,6 +101,58 @@ These are the technologies I use to build backend services.
     <img alt="Postman Logo" height="88" src="/assets/postman-logo-dark.svg" />
 </picture>
 
+#### Tools and IDEs
+
+Here are the tools and IDEs I use to build and test software.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/android-studio-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/android-studio-logo-light.svg" />
+    <img alt="Android Studio Logo" height="88" src="/assets/android-studio-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/xcode-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/xcode-logo-light.svg" />
+    <img alt="Xcode Logo" height="88" src="/assets/xcode-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/intellij-idea-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/intellij-idea-logo-light.svg" />
+    <img alt="IntelliJ IDEA Logo" height="88" src="/assets/intellij-idea-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/webstorm-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/webstorm-logo-light.svg" />
+    <img alt="WebStorm Logo" height="88" src="/assets/webstorm-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/figma-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/figma-logo-light.svg" />
+    <img alt="Figma Logo" height="88" src="/assets/figma-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/vscode-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/vscode-logo-light.svg" />
+    <img alt="VS Code Logo" height="88" src="/assets/vscode-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/gradle-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/gradle-logo-light.svg" />
+    <img alt="Gradle Logo" height="88" src="/assets/gradle-logo-dark.svg">
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/git-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/git-logo-light.svg" />
+    <img alt="Git Logo" height="88" src="/assets/git-logo-dark.svg">
+</picture>
+
 ### Social Media
 
 You can also follow me on other social media platforms to see more of my work.
