@@ -22,6 +22,8 @@ I love contributing to open-source projects and creating my own. Here are some o
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
 
+### Technology Stack
+
 Do you want to know the technology stack I use for writing and developing software? Don’t worry, I’ve got you covered.
 Here’s the list of technologies I use in my daily developer life.
 
@@ -63,6 +65,40 @@ Here are the technologies I use to build cross-platform and native mobile apps.
     <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-ui-logo-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="/assets/swift-ui-logo-light.svg" />
     <img alt="Swift UI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
+</picture>
+
+#### Backend development
+
+These are the technologies I use to build backend services.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/ktor-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/ktor-logo-light.svg" />
+    <img alt="Ktor Logo" height="88" src="/assets/ktor-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/spring-boot-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/spring-boot-logo-light.svg" />
+    <img alt="Spring Boot Logo" height="88" src="/assets/spring-boot-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/postgresql-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/postgresql-logo-light.svg" />
+    <img alt="PostgreSQL Logo" height="88" src="/assets/postgresql-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/firebase-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/firebase-logo-light.svg" />
+    <img alt="Firebase Logo" height="88" src="/assets/firebase-logo-dark.svg" />
+</picture>
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/assets/postman-logo-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="/assets/postman-logo-light.svg" />
+    <img alt="Postman Logo" height="88" src="/assets/postman-logo-dark.svg" />
 </picture>
 
 ### Social Media
