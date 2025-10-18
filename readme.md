@@ -12,7 +12,7 @@ native software solutions with `Kotlin` and `Kotlin Multiplatform`. What began a
 has grown into my passion. I love writing, testing, debugging, and deploying code that solves real-world problems.
 
 I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin Multiplatform` and
-`Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
+`Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single cfvodebase.
 
 ### Open Source
 
@@ -172,11 +172,11 @@ You can also follow me on other social media platforms to see more of my work.
     <img alt="LinkedIn Logo" height="40" src="/assets/linkedin-logo.svg" />
 </a>
 
-<a href="https://www.instagram.com/sudarshanmhasrup/" target="_blank" style="text-decoration:none;">
+<a href="https://www.instagram.com/heyysudarshan/" target="_blank" style="text-decoration:none;">
     <img alt="Instagram Logo" height="40" src="/assets/instagram-logo.svg" hspace="20" />
 </a>
 
-<a href="https://www.threads.com/@sudarshanmhasrup" target="_blank" style="margin-right:20px;">
+<a href="https://www.threads.com/@heyysudarshan" target="_blank" style="margin-right:20px;">
     <img alt="Threads Logo" height="40" src="/assets/threads-logo.svg" />
 </a>
 
