@@ -222,7 +222,7 @@ the same hobbies and preferences, then we’re even. Let’s work together and c
 
 - I love producing music along with programming.
 
-**8) Who's my favorite cricket of all time?**
+**8) Who's my favorite cricketer of all time?**
 
 - It's MS Dhoni.
 
