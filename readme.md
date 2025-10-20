@@ -190,9 +190,9 @@ You can also follow me on other social media platforms to see more of my work.
 
 ### QnA
 
-We developers are normal human beings, and with that said, we share common hobbies and preferences. To help you know me
-more as a person, I've listed some questions along with answers about my hobbies and preferences. If you share the same
-hobbies and preferences, then we’re even. Let’s work together and collaborate!
+We developers are normal human beings, and with that said, we share common hobbies and preferences. To help you know
+more about me as a person, I've listed some questions along with answers about my hobbies and preferences. If you share
+the same hobbies and preferences, then we’re even. Let’s work together and collaborate!
 
 **1) What's my favorite IDE?**
 
