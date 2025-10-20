@@ -190,12 +190,13 @@ You can also follow me on other social media platforms to see more of my work.
 
 ### QnA
 
-Do you want to know more about me? Don't worry: here are some questions and my answers, so you can see if we vibe as
-co-developers. If you share the same preferences, then we’re even. Let’s work together and collaborate!
+We developers are normal human beings, and with that said, we share common hobbies and preferences. To help you know me
+more as a person, I've listed some questions along with answers about my hobbies and preferences. If you share the same
+hobbies and preferences, then we’re even. Let’s work together and collaborate!
 
 **1) What's my favorite IDE?**
 
-- Android Studio (basically any IDE that uses IntelliJ IDEA as its foundation).
+- Android Studio (basically any IDE that uses IntelliJ as its foundation).
 
 **2) What's my favorite programming language?**
 
@@ -213,10 +214,22 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 
 - Fly By Midnight, haha.
 
+**6) What's my favorite sport?**
+
+- I enjoy watching and playing cricket.
+
+**7) What do I like apart from programming?**
+
+- I love producing music along with programming.
+
+**8) Who's my favorite cricket of all time?**
+
+- It's MS Dhoni.
+
 ### Thank You! 🙌
 
 I hope you enjoyed scrolling through my GitHub profile. I'd like to thank you for taking out your time to check out my
-GitHub profile. If you'd like to connect with me and know more about me, then feel free to reach out to me on 
+GitHub profile. If you'd like to connect with me and know more about me, then feel free to reach out to me on
 [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/),
 [Instagram](https://www.instagram.com/heyysudarshan), [X](https://x.com/heyysudarshan),
 [Threads](https://www.threads.com/@heyysudarshan), [Reddit](https://www.reddit.com/user/heyysudarshan/),
