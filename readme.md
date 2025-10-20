@@ -166,7 +166,8 @@ technologies:
 
 ### Social Media
 
-You can also follow me on other social media platforms to see more of my work.
+If you'd like to connect with me outside of GitHub, then you can check out my other social media profiles. I regularly
+post content related to mobile app development and software development on these platforms.
 
 <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
     <img alt="LinkedIn Logo" height="40" src="/assets/linkedin-logo.svg" />
