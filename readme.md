@@ -213,10 +213,12 @@ co-developers. If you share the same preferences, then we’re even. Let’s wor
 
 - Fly By Midnight, haha.
 
-### Thanks for reading!
+### Thank You! 🙌
 
-I hope you enjoyed scrolling through my GitHub profile. If you're curious to know more about me, feel free to
-reach out to me on [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/),
+I hope you enjoyed scrolling through my GitHub profile. I'd like to thank you for taking out your time to check out my
+GitHub profile. If you'd like to connect with me and know more about me, then feel free to reach out to me on 
+[LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/),
 [Instagram](https://www.instagram.com/heyysudarshan), [X](https://x.com/heyysudarshan),
-[Threads](https://www.threads.com/@heyysudarshan), [Reddit](https://www.reddit.com/user/heyysudarshan/) or write me an
-email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com). I'd love to connect with you!
+[Threads](https://www.threads.com/@heyysudarshan), [Reddit](https://www.reddit.com/user/heyysudarshan/),
+[Discord](https://discord.com/users/1395440160803651676), [Snapchat](https://www.snapchat.com/add/heyysudarshan)
+or write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com). I'd love to connect with you!
