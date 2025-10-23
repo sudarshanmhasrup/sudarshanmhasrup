@@ -12,7 +12,7 @@ native software solutions with `Kotlin` and `Kotlin Multiplatform`. What began a
 has grown into my passion. I love writing, testing, debugging, and deploying code that solves real-world problems.
 
 I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin Multiplatform` and
-`Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single cfvodebase.
+`Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
 
 ### Open Source
 
