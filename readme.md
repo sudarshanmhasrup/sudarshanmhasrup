@@ -67,7 +67,7 @@ Here are the technologies I use to build cross-platform and native mobile apps.
     <img alt="Swift UI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
 </picture>
 
-#### Backend development
+#### Backend Development
 
 These are the technologies I use to build backend services.
 
