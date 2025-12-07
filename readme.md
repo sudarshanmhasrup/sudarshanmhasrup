@@ -8,10 +8,10 @@
 ### Introduction 👋
 
 Hi! I’m Sudarshan, a software developer from India who fell in love with Kotlin and enjoys building cross-platform and
-native software solutions with `Kotlin` and `Kotlin Multiplatform`. What began as curiosity about software development
+native software solutions with `Kotlin` and `Compose Multiplatform`. What began as curiosity about software development
 has grown into my passion. I love writing, testing, debugging, and deploying code that solves real-world problems.
 
-I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin Multiplatform` and
+I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin` and
 `Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
 
 ### Open Source
