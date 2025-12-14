@@ -64,7 +64,7 @@ Here are the technologies I use to build cross-platform and native mobile apps.
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/swift-ui-logo-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="/assets/swift-ui-logo-light.svg" />
-    <img alt="Swift UI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
+    <img alt="SwiftUI Logo" height="88" src="/assets/swift-ui-logo-dark.svg" />
 </picture>
 
 #### Backend Development
