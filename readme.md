@@ -160,9 +160,9 @@ dedicated repository for it, so I can experiment with it, like exploring the syn
 libraries, frameworks built around it, etc. Here’s the list of all the repositories I’ve created while learning new
 technologies:
 
-- [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I created this
-  repository to experiment with the Kotlin programming language and explore its ecosystem. It contains all the code I’ve
-  written while learning, exploring, and experimenting with Kotlin.
+- [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I'm absolutely in
+  love with Kotlin: I think about it all the time, even in my sleep! This repository contains all the code I've written
+  while learning, exploring, and experimenting with Kotlin.
 
 ### Social Media
 
