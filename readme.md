@@ -163,6 +163,9 @@ technologies:
 - [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I'm absolutely in
   love with Kotlin: I think about it all the time, even in my sleep! This repository contains all the code I've written
   while learning, exploring, and experimenting with Kotlin.
+- [Exploring the world of Swift](https://github.com/sudarshanmhasrup/exploring-the-world-of-swift): Not a big fanboy of
+  Swift, but I started learning it for writing the presentation layer of my Kotlin Multiplatform apps in Swift for Apple
+  platforms. This repository contains all the code I've written while exploring the Swift programming language.
 
 ### Social Media
 
