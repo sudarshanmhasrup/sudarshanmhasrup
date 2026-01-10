@@ -21,6 +21,9 @@ I love contributing to open-source projects and creating my own. Here are some o
 - [Localina](https://github.com/sudarshanmhasrup/localina): A Kotlin Multiplatform library that supports real-time
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
+- [HelloKMP](https://github.com/sudarshanmhasrup/hello-kmp): A sample Kotlin Multiplatform library template that you can
+  use to structure your next Kotlin Multiplatform library. I created this template to help Kotlin Multiplatform library
+  authors structure their libraries.
 
 ### Technology Stack
 
@@ -166,8 +169,6 @@ technologies:
 - [Exploring the world of Swift](https://github.com/sudarshanmhasrup/exploring-the-world-of-swift): Not a big fanboy of
   Swift, but I started learning it for writing the presentation layer of my Kotlin Multiplatform apps in Swift for Apple
   platforms. This repository contains all the code I've written while exploring the Swift programming language.
-- [HelloKMP](https://github.com/sudarshanmhasrup/hello-kmp): A sample Kotlin Multiplatform library template that you can
-  use to structure your next Kotlin Multiplatform library.
 
 ### Social Media
 
