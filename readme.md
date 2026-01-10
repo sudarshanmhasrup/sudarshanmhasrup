@@ -166,10 +166,12 @@ technologies:
 - [Exploring the world of Swift](https://github.com/sudarshanmhasrup/exploring-the-world-of-swift): Not a big fanboy of
   Swift, but I started learning it for writing the presentation layer of my Kotlin Multiplatform apps in Swift for Apple
   platforms. This repository contains all the code I've written while exploring the Swift programming language.
+- [HelloKMP](https://github.com/sudarshanmhasrup/hello-kmp): A sample Kotlin Multiplatform library template that you can
+  use to structure your next Kotlin Multiplatform library.
 
 ### Social Media
 
-If you'd like to connect with me outside of GitHub, then you can check out my other social media profiles. I regularly
+If you'd like to connect with me outside GitHub, then you can check out my other social media profiles. I regularly
 post content related to mobile app development and software development on these platforms.
 
 <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
