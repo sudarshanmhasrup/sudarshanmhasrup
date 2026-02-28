@@ -158,8 +158,9 @@ Here are the tools and IDEs I use to build and test software.
 
 ### Learn and Fun
 
-The best way to learn a technology is by experimenting with it. Whenever I learn something new, I create a dedicated
-repository for that technology. Here’s the list of all the repositories I’ve created while learning new technologies:
+The best way to learn a new technology is by experimenting with it. Whenever I learn something new, I create a dedicated
+repository for experimenting with that technology. Here’s the list of all the repositories I’ve created while learning 
+new technologies:
 
 - [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I'm absolutely in
   love with Kotlin: I think about it all the time, even in my sleep! This repository contains all the code I've written
