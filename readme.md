@@ -3,7 +3,9 @@
     <source media="(prefers-color-scheme: dark)" srcset="/assets/banner-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="/assets/banner-light.svg" />
     <img alt="Banner" src="/assets/banner-dark.svg" />
-</picture><br><br>
+</picture><br><br><br>
+
+---
 
 ### Introduction 👋
 
@@ -13,6 +15,8 @@ has grown into my passion. I love writing, testing, debugging, and deploying cod
 
 I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin` and
 `Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
+
+---
 
 ### Open Source
 
