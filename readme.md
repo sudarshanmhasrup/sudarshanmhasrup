@@ -172,27 +172,23 @@ technologies:
 
 ### Social Media
 
-If you'd like to connect with me outside GitHub, then you can check out my other social media profiles. I regularly
-post content related to mobile app development and software development on these platforms.
+If you’d like to connect with me outside GitHub, feel free to check out my other social media profiles. I regularly
+share content about mobile app development and software development over there.
 
 <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
-    <img alt="LinkedIn Logo" height="40" src="/assets/linkedin-logo.svg" />
+    <img alt="LinkedIn" height="40" src="/assets/linkedin-logo.svg" />
 </a>
 
 <a href="https://www.instagram.com/heyysudarshan/" target="_blank" style="text-decoration:none;">
-    <img alt="Instagram Logo" height="40" src="/assets/instagram-logo.svg" hspace="20" />
-</a>
-
-<a href="https://www.threads.com/@heyysudarshan" target="_blank" style="margin-right:20px;">
-    <img alt="Threads Logo" height="40" src="/assets/threads-logo.svg" />
+    <img alt="Instagram" height="40" src="/assets/instagram-logo.svg" hspace="20" />
 </a>
 
 <a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
-    <img alt="X Logo" height="40" src="/assets/x-logo.svg" hspace="20" />
+    <img alt="X" height="40" src="/assets/x-logo.svg" hspace="20" />
 </a>
 
-<a href="https://www.reddit.com/user/heyysudarshan/" target="_blank" style="margin-right:20px;">
-    <img alt="Reddit Logo" height="40" src="/assets/reddit-logo.svg" />
+<a href="https://www.threads.com/@heyysudarshan" target="_blank" style="margin-right:20px;">
+    <img alt="Threads" height="40" src="/assets/threads-logo.svg" />
 </a>
 
 ### QnA
@@ -237,7 +233,7 @@ the same hobbies and preferences, then we’re even. Let’s work together and c
 
 I hope you enjoyed scrolling through my GitHub profile. I'd like to thank you for taking out your time to check out my
 GitHub profile. If you'd like to connect with me and know more about me, then feel free to reach out to me on
-[LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/), [Instagram](https://www.instagram.com/heyysudarshan), 
+[LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/), [Instagram](https://www.instagram.com/heyysudarshan),
 [X](https://x.com/heyysudarshan),[Threads](https://www.threads.com/@heyysudarshan),
 [Discord](https://discord.com/users/1395440160803651676), [Snapchat](https://www.snapchat.com/add/heyysudarshan)
 or write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com). I'd love to connect with you!
