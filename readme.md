@@ -183,12 +183,12 @@ share content about mobile app development and software development over there.
     <img alt="Instagram" height="40" src="/assets/instagram-logo.svg" hspace="20" />
 </a>
 
-<a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
-    <img alt="X" height="40" src="/assets/x-logo.svg" hspace="20" />
-</a>
-
 <a href="https://www.threads.com/@heyysudarshan" target="_blank" style="margin-right:20px;">
     <img alt="Threads" height="40" src="/assets/threads-logo.svg" />
+</a>
+
+<a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
+    <img alt="X" height="40" src="/assets/x-logo.svg" hspace="20" />
 </a>
 
 ### QnA
