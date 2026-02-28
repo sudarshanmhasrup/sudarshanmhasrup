@@ -5,8 +5,6 @@
     <img alt="Banner" src="/assets/banner-dark.svg" />
 </picture><br><br><br>
 
----
-
 ### Introduction 👋
 
 Hi! I’m Sudarshan, a software developer from India who fell in love with Kotlin and enjoys building cross-platform and
@@ -15,8 +13,6 @@ has grown into my passion. I love writing, testing, debugging, and deploying cod
 
 I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin` and
 `Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
-
----
 
 ### Open Source
 
