@@ -231,5 +231,5 @@ I hope you enjoyed scrolling through my GitHub profile. I'd like to thank you fo
 GitHub profile. If you'd like to connect with me and know more about me, then feel free to reach out to me on
 [LinkedIn](https://www.linkedin.com/in/sudarshanmhasrup/), [Instagram](https://www.instagram.com/heyysudarshan),
 [X](https://x.com/heyysudarshan),[Threads](https://www.threads.com/@heyysudarshan),
-[Discord](https://discord.com/users/1395440160803651676), [Snapchat](https://www.snapchat.com/add/heyysudarshan)
+[Discord](https://discord.com/users/1395440160803651676), and [Snapchat](https://www.snapchat.com/add/heyysudarshan)
 or write me an email at [sudarshanmhasrup@gmail.com](mailto:sudarshanmhasrup@gmail.com). I'd love to connect with you!
