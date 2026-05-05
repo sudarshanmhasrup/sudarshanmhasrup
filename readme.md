@@ -22,10 +22,8 @@ I love contributing to open-source projects and creating my own. Here are some o
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
   Multiplatform and handle locale changes seamlessly.
 - [Splashify](https://github.com/sudarshanmhasrup/splashify): A Kotlin Multiplatform library for effortless,
-  customizable splash screens in Compose Multiplatform desktop apps.
-- [HelloKMP](https://github.com/sudarshanmhasrup/hello-kmp): A sample Kotlin Multiplatform library template that you can
-  use to structure your next Kotlin Multiplatform library. I created this template to help Kotlin Multiplatform library
-  authors structure their libraries.
+  customizable splash screens in Compose Multiplatform desktop apps. I created this library to help simplify splash
+  screen implementation in Compose Multiplatform desktop apps.
 
 ### Technology Stack
 
