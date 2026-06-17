@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sudarshan Mhasrup — Software Developer specializing in Kotlin and Compose Multiplatform." />
+    <title>Sudarshan Mhasrup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:        #0a0a0b;
+            --bg-2:      #111113;
+            --bg-3:      #18181b;
+            --border:    rgba(255,255,255,0.07);
+            --text:      #e4e4e7;
+            --text-muted:#71717a;
+            --text-dim:  #3f3f46;
+            --accent:    #7c6af7;
+            --accent-2:  #a78bfa;
+            --accent-glow: rgba(124,106,247,0.15);
+            --green:     #34d399;
+            --mono:      'DM Mono', monospace;
+            --sans:      'Inter', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(1.5rem, 5vw, 4rem);
+            height: 64px;
+            background: rgba(10,10,11,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-family: var(--mono);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+        }
+        .nav-logo span { color: var(--accent-2); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+
+        .nav-cta {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .nav-cta:hover { border-color: var(--accent); background: var(--accent-glow); }
+
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+        }
+
+        /* ── HERO ── */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8rem clamp(1.5rem, 8vw, 8rem) 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-noise {
+            position: absolute;
+            inset: 0;
+            background-image:
+                    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(124,106,247,0.08) 0%, transparent 60%),
+                    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(52,211,153,0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-label {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--accent-2);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeUp 0.6s ease 0.1s forwards;
+        }
+
+        .hero-name {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            color: #fff;
+            margin-bottom: 1.25rem;
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeUp 0.6s ease 0.2s forwards;
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text-muted);
+            font-weight: 400;
+            max-width: 520px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeUp 0.6s ease 0.35s forwards;
+        }
+
+        .hero-sub strong { color: var(--text); font-weight: 500; }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.875rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeUp 0.6s ease 0.5s forwards;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.4rem;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            background: var(--accent-2);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(124,106,247,0.3);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.4rem;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: color 0.2s, border-color 0.2s, background 0.2s;
+        }
+        .btn-ghost:hover {
+            color: var(--text);
+            border-color: rgba(255,255,255,0.15);
+            background: var(--bg-3);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2.5rem;
+            left: clamp(1.5rem, 8vw, 8rem);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            opacity: 0;
+            animation: fadeUp 0.6s ease 0.9s forwards;
+        }
+        .hero-scroll::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 40px;
+            background: var(--text-dim);
+            animation: lineGrow 0.8s ease 1.2s both;
+            transform-origin: top;
+        }
+        @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+        /* ── SECTIONS ── */
+        section { padding: 6rem clamp(1.5rem, 8vw, 8rem); }
+
+        .section-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--accent-2);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 0.875rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .section-body {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0 clamp(1.5rem, 8vw, 8rem);
+        }
+
+        /* ── ABOUT ── */
+        #about .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+        @media (max-width: 768px) { #about .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+        .about-text p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; }
+        .about-text p:last-child { margin-bottom: 0; }
+        .about-text a { color: var(--accent-2); text-decoration: none; }
+        .about-text a:hover { text-decoration: underline; }
+
+        .about-facts {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .fact-row {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .fact-row:first-child { border-top: 1px solid var(--border); }
+
+        .fact-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            min-width: 90px;
+        }
+        .fact-value { font-size: 0.9rem; color: var(--text-muted); }
+        .fact-value span { color: var(--text); }
+
+        /* ── SKILLS ── */
+        #skills { background: var(--bg); }
+
+        .skills-groups {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .skill-group-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.85rem;
+            background: var(--bg-3);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            letter-spacing: 0.01em;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+        }
+        .skill-tag:hover {
+            border-color: var(--accent);
+            color: var(--text);
+            background: var(--accent-glow);
+        }
+        .skill-tag .dot {
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--accent-2);
+            flex-shrink: 0;
+        }
+
+        /* ── PROJECTS ── */
+        #projects { background: var(--bg); }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+            gap: 1px;
+            margin-top: 3rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .project-card {
+            background: var(--bg-2);
+            padding: 2rem;
+            position: relative;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            pointer-events: none;
+        }
+        .project-card:hover { background: var(--bg-3); }
+
+        .project-type {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.625rem;
+            letter-spacing: -0.01em;
+        }
+
+        .project-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .project-tag {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.55rem;
+            background: rgba(124,106,247,0.08);
+            color: var(--accent-2);
+            border-radius: 4px;
+            letter-spacing: 0.04em;
+        }
+
+        .project-arrow {
+            position: absolute;
+            top: 1.75rem;
+            right: 1.75rem;
+            color: var(--text-dim);
+            font-size: 1rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .project-card:hover .project-arrow { color: var(--accent-2); transform: translate(2px, -2px); }
+
+        /* ── OSS ── */
+        #oss { background: var(--bg); }
+
+        .oss-list {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .oss-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.75rem 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .oss-item:first-child { border-top: 1px solid var(--border); }
+        .oss-item:hover { opacity: 0.85; }
+
+        .oss-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            background: var(--bg-3);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .oss-info { flex: 1; }
+        .oss-name { font-size: 0.9375rem; font-weight: 500; color: var(--text); margin-bottom: 0.3rem; }
+        .oss-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+
+        .oss-link {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--accent-2);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ── CONTACT ── */
+        #contact {
+            background: var(--bg);
+            text-align: center;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        #contact .section-label { text-align: center; }
+
+        .contact-heading {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #fff;
+            margin: 0.75rem 0 1rem;
+            line-height: 1.1;
+        }
+
+        .contact-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 0.875rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            font-size: 0.8125rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+            font-family: var(--mono);
+        }
+        .social-link:hover { color: var(--text-muted); }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem clamp(1.5rem, 8vw, 8rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-copy {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-made {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+        }
+        .footer-made span { color: var(--accent-2); }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── SCROLLBAR ── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
+
+        /* ── SELECTION ── */
+        ::selection { background: rgba(124,106,247,0.3); color: #fff; }
+
+        /* ── MOBILE TWEAKS ── */
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; }
+            .btn-primary, .btn-ghost { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-logo"><span>~/</span>sudarshan</div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#oss">Open Source</a></li>
+    </ul>
+    <a href="mailto:hello@sudarshanmhasrup.com" class="nav-cta">Say hello →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-noise"></div>
+    <p class="hero-label">Software Developer · India</p>
+    <h1 class="hero-name">Sudarshan<br/>Mhasrup</h1>
+    <p class="hero-sub">
+        I build <strong>cross-platform and native software</strong> with Kotlin and Compose Multiplatform —
+        Android, iOS, desktop, and web from a single, expressive codebase.
+    </p>
+    <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View my work ↓</a>
+        <a href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+    </div>
+    <div class="hero-scroll">scroll</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+    <p class="section-label reveal">About</p>
+    <h2 class="section-title reveal">Passion turned profession</h2>
+    <div class="about-grid">
+        <div class="about-text reveal">
+            <p>
+                Hi, I'm Sudarshan — a software developer from India who fell in love with Kotlin and never looked back.
+                What began as curiosity about how software works has grown into a deep passion for writing, testing,
+                debugging, and shipping code that solves real-world problems.
+            </p>
+            <p>
+                I've dedicated myself to building native and cross-platform solutions using
+                <a href="https://kotlinlang.org" target="_blank" rel="noopener">Kotlin</a> and
+                <a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" rel="noopener">Compose Multiplatform</a>,
+                targeting Android, iOS, desktop, and web from a single codebase.
+            </p>
+            <p>
+                Beyond coding, I produce music, follow cricket passionately (MS Dhoni, forever), and believe the best
+                way to learn a technology is by building with it — no shortcuts.
+            </p>
+        </div>
+        <div class="about-facts reveal">
+            <div class="fact-row">
+                <span class="fact-label">Location</span>
+                <span class="fact-value"><span>India</span></span>
+            </div>
+            <div class="fact-row">
+                <span class="fact-label">Focus</span>
+                <span class="fact-value"><span>Kotlin Multiplatform</span></span>
+            </div>
+            <div class="fact-row">
+                <span class="fact-label">Fav IDE</span>
+                <span class="fact-value"><span>Android Studio</span> <span style="color:var(--text-dim)">/ IntelliJ</span></span>
+            </div>
+            <div class="fact-row">
+                <span class="fact-label">Fav Lang</span>
+                <span class="fact-value"><span>Kotlin</span>, obviously</span>
+            </div>
+            <div class="fact-row">
+                <span class="fact-label">Build Tool</span>
+                <span class="fact-value"><span>Gradle</span>, anytime</span>
+            </div>
+            <div class="fact-row">
+                <span class="fact-label">Beyond code</span>
+                <span class="fact-value">Music production · Cricket</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+    <p class="section-label reveal">Technology Stack</p>
+    <h2 class="section-title reveal">Tools of the trade</h2>
+
+    <div class="skills-groups">
+        <div class="reveal">
+            <p class="skill-group-label">Mobile & Cross-Platform</p>
+            <div class="skill-tags">
+                <span class="skill-tag"><span class="dot"></span>Kotlin</span>
+                <span class="skill-tag"><span class="dot"></span>Kotlin Multiplatform</span>
+                <span class="skill-tag"><span class="dot"></span>Compose Multiplatform</span>
+                <span class="skill-tag"><span class="dot"></span>Jetpack Compose</span>
+                <span class="skill-tag"><span class="dot"></span>Swift</span>
+                <span class="skill-tag"><span class="dot"></span>SwiftUI</span>
+            </div>
+        </div>
+        <div class="reveal">
+            <p class="skill-group-label">Backend</p>
+            <div class="skill-tags">
+                <span class="skill-tag"><span class="dot"></span>Ktor</span>
+                <span class="skill-tag"><span class="dot"></span>Spring Boot</span>
+                <span class="skill-tag"><span class="dot"></span>PostgreSQL</span>
+                <span class="skill-tag"><span class="dot"></span>Firebase</span>
+            </div>
+        </div>
+        <div class="reveal">
+            <p class="skill-group-label">Tools & IDEs</p>
+            <div class="skill-tags">
+                <span class="skill-tag"><span class="dot"></span>Android Studio</span>
+                <span class="skill-tag"><span class="dot"></span>IntelliJ IDEA</span>
+                <span class="skill-tag"><span class="dot"></span>Xcode</span>
+                <span class="skill-tag"><span class="dot"></span>WebStorm</span>
+                <span class="skill-tag"><span class="dot"></span>Figma</span>
+                <span class="skill-tag"><span class="dot"></span>VS Code</span>
+                <span class="skill-tag"><span class="dot"></span>Gradle</span>
+                <span class="skill-tag"><span class="dot"></span>Postman</span>
+                <span class="skill-tag"><span class="dot"></span>Git</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <p class="section-label reveal">Projects</p>
+    <h2 class="section-title reveal">Things I've shipped</h2>
+
+    <div class="projects-grid reveal">
+        <a class="project-card" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
+            <p class="project-type">Library · KMP</p>
+            <h3 class="project-name">Localina</h3>
+            <p class="project-desc">
+                A Kotlin Multiplatform library that enables real-time locale updates in Compose Multiplatform apps — no restart required.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">Kotlin</span>
+                <span class="project-tag">KMP</span>
+                <span class="project-tag">Compose</span>
+                <span class="project-tag">i18n</span>
+            </div>
+            <span class="project-arrow">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
+            <p class="project-type">Library · KMP</p>
+            <h3 class="project-name">Splashify</h3>
+            <p class="project-desc">
+                Effortless, fully customizable splash screens for Compose Multiplatform desktop apps. Simple API, beautiful results.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">Kotlin</span>
+                <span class="project-tag">KMP</span>
+                <span class="project-tag">Desktop</span>
+                <span class="project-tag">Compose</span>
+            </div>
+            <span class="project-arrow">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin" target="_blank" rel="noopener">
+            <p class="project-type">Learning · Experiments</p>
+            <h3 class="project-name">Exploring Kotlin</h3>
+            <p class="project-desc">
+                A living repository of every experiment, snippet, and concept I've worked through while going deep on Kotlin.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">Kotlin</span>
+                <span class="project-tag">Experiments</span>
+                <span class="project-tag">Open source</span>
+            </div>
+            <span class="project-arrow">↗</span>
+        </a>
+
+        <a class="project-card" href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener">
+            <p class="project-type">Profile</p>
+            <h3 class="project-name">More on GitHub</h3>
+            <p class="project-desc">
+                Explore all my repositories, contributions, and ongoing experiments on GitHub.
+            </p>
+            <div class="project-tags">
+                <span class="project-tag">GitHub</span>
+                <span class="project-tag">Open source</span>
+            </div>
+            <span class="project-arrow">↗</span>
+        </a>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OPEN SOURCE -->
+<section id="oss">
+    <p class="section-label reveal">Open Source</p>
+    <h2 class="section-title reveal">Built for the community</h2>
+    <p class="section-body reveal">I love creating tools that make other developers' lives easier — especially in the Kotlin and Compose ecosystem.</p>
+
+    <div class="oss-list">
+        <a class="oss-item reveal" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
+            <div class="oss-icon">🌐</div>
+            <div class="oss-info">
+                <p class="oss-name">Localina</p>
+                <p class="oss-desc">Real-time locale switching for Compose Multiplatform — supporting seamless i18n without app restarts.</p>
+            </div>
+            <div class="oss-link">github ↗</div>
+        </a>
+        <a class="oss-item reveal" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
+            <div class="oss-icon">✨</div>
+            <div class="oss-info">
+                <p class="oss-name">Splashify</p>
+                <p class="oss-desc">Drop-in customizable splash screen library for Compose Multiplatform desktop applications.</p>
+            </div>
+            <div class="oss-link">github ↗</div>
+        </a>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+    <p class="section-label reveal">Contact</p>
+    <h2 class="contact-heading reveal">Let's build something.</h2>
+    <p class="contact-sub reveal">Whether it's a collaboration, a question, or just a chat about Kotlin.</p>
+    <div class="contact-actions reveal">
+        <a href="mailto:hello@sudarshanmhasrup.com" class="btn-primary">hello@sudarshanmhasrup.com →</a>
+        <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+    </div>
+    <div class="social-links reveal">
+        <a href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener" class="social-link">GitHub</a>
+        <a href="https://x.com/heyysudarshan" target="_blank" rel="noopener" class="social-link">X</a>
+        <a href="https://www.instagram.com/heyysudarshan/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://www.threads.com/@heyysudarshan" target="_blank" rel="noopener" class="social-link">Threads</a>
+        <a href="https://discord.com/users/1395440160803651676" target="_blank" rel="noopener" class="social-link">Discord</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p class="footer-copy">© 2026 Sudarshan Mhasrup. All rights reserved.</p>
+    <p class="footer-made">Built with <span>♥</span> and Kotlin in mind.</p>
+</footer>
+
+<script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+        (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    reveals.forEach((el, i) => {
+        el.style.transitionDelay = (i % 4) * 0.08 + 's';
+        observer.observe(el);
+    });
+</script>
+</body>
+</html>
