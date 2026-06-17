@@ -1,850 +1,983 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sudarshan Mhasrup — Software Developer specializing in Kotlin and Compose Multiplatform." />
-    <title>Sudarshan Mhasrup</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Sudarshan Mhasrup — Software developer building cross-platform apps with Kotlin and Compose Multiplatform."/>
+<title>Sudarshan Mhasrup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-        :root {
-            --bg:        #0a0a0b;
-            --bg-2:      #111113;
-            --bg-3:      #18181b;
-            --border:    rgba(255,255,255,0.07);
-            --text:      #e4e4e7;
-            --text-muted:#71717a;
-            --text-dim:  #3f3f46;
-            --accent:    #7c6af7;
-            --accent-2:  #a78bfa;
-            --accent-glow: rgba(124,106,247,0.15);
-            --green:     #34d399;
-            --mono:      'DM Mono', monospace;
-            --sans:      'Inter', sans-serif;
-        }
+:root{
+  --ease:cubic-bezier(.16,1,.3,1);
+  --bg:#f7f4ef;
+  --bg2:#efece6;
+  --bg3:#e8e4dc;
+  --ink:#141210;
+  --ink2:#5a5650;
+  --ink3:#a09c94;
+  --rule:rgba(20,18,16,.09);
+  --rule2:rgba(20,18,16,.16);
+  --accent:#d4500a;
+  --accent-light:#fdf0e8;
+  --accent-dark:#a33c06;
+  --green:#1a7a4a;
+  --green-bg:#eaf5f0;
+  --blue:#1a4fd4;
+  --blue-bg:#eaeffd;
+  --card:#ffffff;
+  --card-border:rgba(20,18,16,.1);
+  --nav-bg:rgba(247,244,239,.9);
+  --btn-ink:#fff;
+  --tag-bg:rgba(20,18,16,.06);
+  --tag-ink:#5a5650;
+}
+[data-theme="dark"]{
+  --bg:#100f0d;
+  --bg2:#181612;
+  --bg3:#201e19;
+  --ink:#f2ede6;
+  --ink2:#9a9590;
+  --ink3:#504d47;
+  --rule:rgba(242,237,230,.08);
+  --rule2:rgba(242,237,230,.14);
+  --accent:#f07840;
+  --accent-light:#2a1a0e;
+  --accent-dark:#f8a070;
+  --green:#3db87a;
+  --green-bg:#0d2419;
+  --blue:#6b9fff;
+  --blue-bg:#0d1a34;
+  --card:#18160f;
+  --card-border:rgba(242,237,230,.1);
+  --nav-bg:rgba(16,15,13,.9);
+  --btn-ink:#100f0d;
+  --tag-bg:rgba(242,237,230,.07);
+  --tag-ink:#9a9590;
+}
 
-        html { scroll-behavior: smooth; }
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  transition:background .35s,color .35s;
+}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:4px}
 
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--sans);
-            font-size: 16px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
+/* ────── NAV ────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  height:58px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1.25rem,4vw,3rem);
+  background:var(--nav-bg);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--rule);
+  transition:background .35s,border-color .35s;
+}
+.nav-logo{
+  font-family:'Fraunces',serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--ink);text-decoration:none;
+  letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.5rem;
+}
+.nav-logo-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);
+  display:inline-block;
+  margin-bottom:1px;
+}
+.nav-c{display:flex;align-items:center;gap:1.5rem}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{
+  font-size:.8rem;font-weight:400;letter-spacing:.02em;
+  color:var(--ink3);text-decoration:none;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--ink)}
+.theme-btn{
+  width:30px;height:30px;
+  background:var(--tag-bg);border:1px solid var(--rule2);
+  border-radius:7px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink2);
+  transition:all .2s;flex-shrink:0;
+}
+.theme-btn:hover{background:var(--bg3);color:var(--ink)}
+.theme-btn svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.i-sun{display:none}
+.i-moon{display:block}
+[data-theme="dark"] .i-sun{display:block}
+[data-theme="dark"] .i-moon{display:none}
+@media(max-width:580px){.nav-links{display:none}}
 
-        /* ── NAV ── */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 clamp(1.5rem, 5vw, 4rem);
-            height: 64px;
-            background: rgba(10,10,11,0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-        }
+/* ────── HERO ────── */
+#hero{
+  min-height:100svh;
+  padding:58px clamp(1.25rem,5vw,4rem) 0;
+  display:flex;flex-direction:column;
+}
+.hero-main{
+  flex:1;display:flex;flex-direction:column;justify-content:center;
+  padding:3.5rem 0 2rem;
+  max-width:1100px;
+}
+.hero-top{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;
+  margin-bottom:2.5rem;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--accent-light);
+  border:1px solid var(--accent);
+  border-radius:999px;
+  padding:.3rem .85rem .3rem .5rem;
+  font-family:'DM Mono',monospace;
+  font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--accent);
+  white-space:nowrap;
+  margin-bottom:1.75rem;
+}
+.hero-badge-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+  animation:pulse 2s ease infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
-        .nav-logo {
-            font-family: var(--mono);
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            letter-spacing: 0.02em;
-        }
-        .nav-logo span { color: var(--accent-2); }
+.hero-h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(3.5rem,9vw,8rem);
+  font-weight:900;letter-spacing:-.04em;
+  line-height:.95;
+  color:var(--ink);
+}
+.hero-h1 .italic{font-style:italic;font-weight:300;color:var(--ink2)}
+.hero-h1 .accent{color:var(--accent)}
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--text); }
+.hero-right{
+  display:flex;flex-direction:column;
+  align-items:flex-end;justify-content:flex-end;
+  gap:1rem;flex-shrink:0;
+  padding-top:.5rem;
+}
+.hero-meta{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink3);text-align:right;line-height:1.8;
+}
 
-        .nav-cta {
-            font-size: 0.8125rem;
-            font-weight: 500;
-            color: var(--text);
-            text-decoration: none;
-            padding: 0.4rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            transition: border-color 0.2s, background 0.2s;
-        }
-        .nav-cta:hover { border-color: var(--accent); background: var(--accent-glow); }
+.hero-desc{
+  margin-top:2.5rem;
+  display:flex;align-items:flex-start;gap:3rem;flex-wrap:wrap;
+}
+.hero-desc-text{
+  font-size:clamp(1rem,1.6vw,1.2rem);
+  font-weight:300;line-height:1.8;
+  color:var(--ink2);max-width:520px;
+}
+.hero-desc-text strong{color:var(--ink);font-weight:500}
+.hero-actions{
+  display:flex;gap:.65rem;flex-wrap:wrap;
+  flex-shrink:0;margin-top:.25rem;
+}
 
-        @media (max-width: 640px) {
-            .nav-links { display: none; }
-        }
+/* ────── BUTTONS ────── */
+.btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.875rem;font-weight:500;
+  border-radius:8px;padding:.6rem 1.2rem;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .18s var(--ease),background .2s,box-shadow .2s;
+  white-space:nowrap;
+}
+.btn:active{transform:scale(.97)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(212,80,10,.25)}
+.btn-ghost{background:var(--tag-bg);color:var(--ink2);border:1px solid var(--rule2)}
+.btn-ghost:hover{background:var(--bg3);color:var(--ink);transform:translateY(-1px)}
 
-        /* ── HERO ── */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 8rem clamp(1.5rem, 8vw, 8rem) 6rem;
-            position: relative;
-            overflow: hidden;
-        }
+/* ────── HERO BOTTOM BAR ────── */
+.hero-bottom{
+  border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.hstat{
+  padding:1.5rem 0;
+  border-right:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:.2rem;
+}
+.hstat:last-child{border-right:none}
+.hstat-n{
+  font-family:'Fraunces',serif;
+  font-size:2rem;font-weight:700;letter-spacing:-.04em;
+  color:var(--ink);line-height:1;
+}
+.hstat-l{
+  font-family:'DM Mono',monospace;
+  font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink3);
+}
+@media(max-width:540px){
+  .hero-bottom{grid-template-columns:repeat(2,1fr)}
+  .hstat:nth-child(2){border-right:none}
+  .hstat:nth-child(3){border-top:1px solid var(--rule)}
+  .hstat:nth-child(4){border-top:1px solid var(--rule);border-right:none}
+}
 
-        .hero-noise {
-            position: absolute;
-            inset: 0;
-            background-image:
-                    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(124,106,247,0.08) 0%, transparent 60%),
-                    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(52,211,153,0.04) 0%, transparent 50%);
-            pointer-events: none;
-        }
+/* ────── MARQUEE ────── */
+.marquee-wrap{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  overflow:hidden;
+  background:var(--ink);
+  padding:.7rem 0;
+}
+.marquee-track{
+  display:flex;white-space:nowrap;
+  animation:marquee 28s linear infinite;
+  width:max-content;
+}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{
+  font-family:'Fraunces',serif;
+  font-size:1.1rem;font-weight:300;font-style:italic;
+  color:rgba(247,244,239,.5);
+  padding:0 2rem;
+  display:inline-flex;align-items:center;gap:2rem;
+}
+.marquee-item .sep{color:var(--accent);font-style:normal;font-size:.8rem}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-        .hero-label {
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            color: var(--accent-2);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeUp 0.6s ease 0.1s forwards;
-        }
+/* ────── SECTIONS ────── */
+.sec{padding:5.5rem clamp(1.25rem,5vw,4rem)}
+.sec-inner{max-width:1100px;margin:0 auto}
+.sec-head{margin-bottom:3.5rem}
+.s-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.75rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.s-eyebrow::before{content:'';width:16px;height:1px;background:var(--accent)}
+.s-h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,4vw,3.25rem);
+  font-weight:700;letter-spacing:-.035em;
+  color:var(--ink);line-height:1.1;
+}
+.s-h2 em{font-style:italic;font-weight:300;color:var(--ink2)}
+.s-sub{
+  font-size:1rem;font-weight:300;
+  color:var(--ink2);line-height:1.8;
+  max-width:520px;margin-top:.875rem;
+}
+hr.div{border:none;border-top:1px solid var(--rule);margin:0 clamp(1.25rem,5vw,4rem)}
 
-        .hero-name {
-            font-size: clamp(2.5rem, 7vw, 5.5rem);
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            color: #fff;
-            margin-bottom: 1.25rem;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: fadeUp 0.6s ease 0.2s forwards;
-        }
+/* ────── ABOUT ────── */
+.about-layout{
+  display:grid;grid-template-columns:1fr 380px;
+  gap:4rem;align-items:start;
+}
+@media(max-width:860px){.about-layout{grid-template-columns:1fr}}
 
-        .hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
-            color: var(--text-muted);
-            font-weight: 400;
-            max-width: 520px;
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: fadeUp 0.6s ease 0.35s forwards;
-        }
+.about-body p{
+  font-size:1.05rem;font-weight:300;
+  color:var(--ink2);line-height:1.9;margin-bottom:1.25rem;
+}
+.about-body p:last-child{margin:0}
+.about-body a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:.05em}
+.about-body a:hover{color:var(--accent-dark)}
 
-        .hero-sub strong { color: var(--text); font-weight: 500; }
+/* Personality cards */
+.fun-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:var(--rule2);
+  border:1px solid var(--rule2);border-radius:14px;overflow:hidden;
+}
+.fun-card{
+  background:var(--card);
+  padding:1.25rem;
+  transition:background .2s;
+}
+.fun-card:hover{background:var(--bg2)}
+.fun-card-icon{font-size:1.5rem;margin-bottom:.5rem}
+.fun-card-label{
+  font-family:'DM Mono',monospace;
+  font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:.2rem;
+}
+.fun-card-val{
+  font-size:.9rem;font-weight:500;color:var(--ink);
+}
+.fun-card-val small{font-weight:300;color:var(--ink2);font-size:.8rem}
 
-        .hero-actions {
-            display: flex;
-            gap: 0.875rem;
-            flex-wrap: wrap;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: fadeUp 0.6s ease 0.5s forwards;
-        }
+/* ────── SKILLS BENTO ────── */
+.bento{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:auto;
+  gap:12px;
+}
+.bcard{
+  background:var(--card);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  padding:1.5rem;
+  transition:border-color .2s,box-shadow .2s,transform .2s;
+  overflow:hidden;
+  position:relative;
+}
+.bcard:hover{
+  border-color:var(--rule2);
+  box-shadow:0 4px 24px rgba(0,0,0,.07);
+  transform:translateY(-2px);
+}
+.bcard-label{
+  font-family:'DM Mono',monospace;
+  font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:1rem;
+}
+.bcard-title{
+  font-family:'Fraunces',serif;
+  font-size:1.4rem;font-weight:700;letter-spacing:-.02em;
+  color:var(--ink);margin-bottom:.5rem;line-height:1.15;
+}
+.bcard-body{font-size:.875rem;font-weight:300;color:var(--ink2);line-height:1.7}
 
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.65rem 1.4rem;
-            background: var(--accent);
-            color: #fff;
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-        }
-        .btn-primary:hover {
-            background: var(--accent-2);
-            transform: translateY(-1px);
-            box-shadow: 0 8px 24px rgba(124,106,247,0.3);
-        }
+/* bento spans */
+.b-span-5{grid-column:span 5}
+.b-span-4{grid-column:span 4}
+.b-span-3{grid-column:span 3}
+.b-span-7{grid-column:span 7}
+.b-span-8{grid-column:span 8}
+.b-span-12{grid-column:span 12}
+@media(max-width:900px){
+  .b-span-5,.b-span-4,.b-span-3,.b-span-7,.b-span-8,.b-span-12{grid-column:span 12}
+}
+@media(min-width:600px) and (max-width:899px){
+  .b-span-5,.b-span-7{grid-column:span 6}
+  .b-span-4,.b-span-8{grid-column:span 6}
+  .b-span-3{grid-column:span 6}
+  .b-span-12{grid-column:span 12}
+}
 
-        .btn-ghost {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.65rem 1.4rem;
-            background: transparent;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: color 0.2s, border-color 0.2s, background 0.2s;
-        }
-        .btn-ghost:hover {
-            color: var(--text);
-            border-color: rgba(255,255,255,0.15);
-            background: var(--bg-3);
-        }
+/* accent bento cards */
+.bcard-accent{background:var(--accent);border-color:transparent;color:#fff}
+.bcard-accent .bcard-label{color:rgba(255,255,255,.6)}
+.bcard-accent .bcard-title,.bcard-accent .bcard-body{color:#fff}
+.bcard-accent:hover{box-shadow:0 6px 28px rgba(212,80,10,.3)}
 
-        .hero-scroll {
-            position: absolute;
-            bottom: 2.5rem;
-            left: clamp(1.5rem, 8vw, 8rem);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.08em;
-            opacity: 0;
-            animation: fadeUp 0.6s ease 0.9s forwards;
-        }
-        .hero-scroll::before {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 40px;
-            background: var(--text-dim);
-            animation: lineGrow 0.8s ease 1.2s both;
-            transform-origin: top;
-        }
-        @keyframes lineGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.bcard-dark{background:var(--ink);border-color:transparent}
+.bcard-dark .bcard-label{color:var(--ink3)}
+.bcard-dark .bcard-title,.bcard-dark .bcard-body{color:var(--bg)}
 
-        /* ── SECTIONS ── */
-        section { padding: 6rem clamp(1.5rem, 8vw, 8rem); }
+/* tag pills */
+.pill-wrap{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem}
+.pill{
+  display:inline-block;
+  padding:.25rem .7rem;
+  font-size:.78rem;font-weight:400;letter-spacing:.01em;
+  border-radius:6px;
+  background:var(--tag-bg);color:var(--tag-ink);
+  border:1px solid var(--rule);
+  transition:all .15s;
+}
+.pill:hover{background:var(--accent-light);color:var(--accent);border-color:var(--accent)}
+.pill-white{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.2)}
+.pill-white:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4)}
 
-        .section-label {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--accent-2);
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            margin-bottom: 0.875rem;
-        }
+/* big number card */
+.bcard-num{
+  font-family:'Fraunces',serif;
+  font-size:4.5rem;font-weight:900;letter-spacing:-.05em;
+  line-height:1;color:var(--accent);
+}
 
-        .section-title {
-            font-size: clamp(1.5rem, 3vw, 2.25rem);
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: #fff;
-            margin-bottom: 1rem;
-        }
+/* ────── PROJECTS ────── */
+.proj-list{display:flex;flex-direction:column}
+.proj-row{
+  display:grid;
+  grid-template-columns:56px 1fr auto;
+  gap:2rem;align-items:start;
+  padding:2.25rem 0;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;
+  transition:background .2s;
+  border-radius:0;
+  position:relative;
+}
+.proj-row:first-child{border-top:1px solid var(--rule)}
+.proj-row::before{
+  content:'';
+  position:absolute;inset:0 -1.5rem;
+  border-radius:12px;
+  background:var(--bg2);
+  opacity:0;
+  transition:opacity .2s;
+  z-index:0;
+  pointer-events:none;
+}
+.proj-row:hover::before{opacity:1}
+.proj-row>*{position:relative;z-index:1}
 
-        .section-body {
-            font-size: 1rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            max-width: 600px;
-        }
+.proj-num{
+  font-family:'Fraunces',serif;
+  font-size:2.5rem;font-weight:900;letter-spacing:-.05em;
+  color:var(--rule2);line-height:1;
+  padding-top:.1rem;
+  transition:color .2s;
+  user-select:none;
+}
+.proj-row:hover .proj-num{color:var(--accent)}
+.proj-info{}
+.proj-type{
+  font-family:'DM Mono',monospace;
+  font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink3);margin-bottom:.4rem;
+}
+.proj-name{
+  font-family:'Fraunces',serif;
+  font-size:1.6rem;font-weight:700;letter-spacing:-.03em;
+  color:var(--ink);margin-bottom:.5rem;line-height:1.1;
+  transition:color .2s;
+}
+.proj-row:hover .proj-name{color:var(--accent)}
+.proj-desc{
+  font-size:.9rem;font-weight:300;
+  color:var(--ink2);line-height:1.7;margin-bottom:.875rem;
+}
+.proj-tags{display:flex;gap:.35rem;flex-wrap:wrap}
+.proj-tag{
+  font-family:'DM Mono',monospace;
+  font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.2rem .55rem;
+  background:var(--tag-bg);color:var(--tag-ink);
+  border-radius:5px;
+}
+.proj-arrow{
+  font-size:1.4rem;color:var(--ink3);
+  transition:color .2s,transform .25s var(--ease);
+  flex-shrink:0;padding-top:.15rem;
+  font-weight:300;
+}
+.proj-row:hover .proj-arrow{color:var(--accent);transform:translate(4px,-4px)}
+@media(max-width:520px){
+  .proj-row{grid-template-columns:40px 1fr;gap:1rem}
+  .proj-arrow{display:none}
+  .proj-num{font-size:1.75rem}
+}
 
-        /* ── DIVIDER ── */
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 0 clamp(1.5rem, 8vw, 8rem);
-        }
+/* ────── OSS ────── */
+.oss-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1px;background:var(--rule2);
+  border:1px solid var(--rule2);border-radius:16px;overflow:hidden;
+  margin-top:0;
+}
+.oss-card{
+  background:var(--card);
+  padding:2rem;text-decoration:none;
+  display:flex;flex-direction:column;gap:0;
+  transition:background .2s;position:relative;
+}
+.oss-card:hover{background:var(--bg2)}
+.oss-icon{
+  width:44px;height:44px;border-radius:10px;
+  border:1px solid var(--rule2);
+  background:var(--bg2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;margin-bottom:1.25rem;
+}
+.oss-name{
+  font-family:'Fraunces',serif;
+  font-size:1.3rem;font-weight:700;letter-spacing:-.025em;
+  color:var(--ink);margin-bottom:.5rem;line-height:1.1;
+}
+.oss-desc{
+  font-size:.875rem;font-weight:300;
+  color:var(--ink2);line-height:1.7;flex:1;
+  margin-bottom:1.25rem;
+}
+.oss-footer{
+  display:flex;align-items:center;justify-content:space-between;
+}
+.oss-link{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);
+}
+.oss-arr{
+  color:var(--ink3);font-size:1rem;
+  transition:transform .2s,color .2s;
+}
+.oss-card:hover .oss-arr{color:var(--accent);transform:translate(3px,-3px)}
 
-        /* ── ABOUT ── */
-        #about .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-            align-items: start;
-        }
-        @media (max-width: 768px) { #about .about-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+/* ────── CONTACT ────── */
+#contact{background:var(--ink);padding:7rem clamp(1.25rem,5vw,4rem)}
+.contact-inner{max-width:1100px;margin:0 auto}
+.contact-eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink3);
+  display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;
+}
+.contact-eyebrow::before{content:'';width:16px;height:1px;background:var(--ink3)}
+.contact-h{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.75rem,7vw,6rem);
+  font-weight:900;letter-spacing:-.04em;
+  line-height:.95;color:var(--bg);
+  margin-bottom:2.5rem;
+}
+.contact-h em{font-style:italic;font-weight:300;color:var(--ink3)}
+.contact-row{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:2rem;flex-wrap:wrap;padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.contact-email{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1rem,2.5vw,1.5rem);
+  font-weight:300;font-style:italic;
+  color:rgba(247,244,239,.5);
+  text-decoration:none;
+  transition:color .2s;
+}
+.contact-email:hover{color:var(--bg)}
+.contact-btns{display:flex;gap:.65rem;flex-wrap:wrap}
+.btn-light{background:var(--bg);color:var(--ink)}
+.btn-light:hover{background:var(--bg2);transform:translateY(-1px)}
+.btn-ghost-light{
+  background:transparent;
+  color:rgba(247,244,239,.6);
+  border:1px solid rgba(247,244,239,.15);
+}
+.btn-ghost-light:hover{color:var(--bg);border-color:rgba(247,244,239,.4)}
+.socials{
+  margin-top:3.5rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;gap:2rem;flex-wrap:wrap;
+}
+.soc-a{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(247,244,239,.35);text-decoration:none;
+  transition:color .2s;
+}
+.soc-a:hover{color:rgba(247,244,239,.7)}
 
-        .about-text p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; }
-        .about-text p:last-child { margin-bottom: 0; }
-        .about-text a { color: var(--accent-2); text-decoration: none; }
-        .about-text a:hover { text-decoration: underline; }
+/* ────── FOOTER ────── */
+footer{
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:1.5rem clamp(1.25rem,5vw,4rem);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.f-l,.f-r{
+  font-family:'DM Mono',monospace;
+  font-size:.62rem;letter-spacing:.08em;
+  color:rgba(247,244,239,.25);
+}
 
-        .about-facts {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
+/* ────── REVEAL ────── */
+.rv{
+  opacity:0;transform:translateY(22px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.rv.in{opacity:1;transform:none}
+.rv2{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .55s var(--ease),transform .55s var(--ease);
+}
+.rv2.in{opacity:1;transform:none}
 
-        .fact-row {
-            display: flex;
-            align-items: baseline;
-            gap: 1rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .fact-row:first-child { border-top: 1px solid var(--border); }
-
-        .fact-label {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            min-width: 90px;
-        }
-        .fact-value { font-size: 0.9rem; color: var(--text-muted); }
-        .fact-value span { color: var(--text); }
-
-        /* ── SKILLS ── */
-        #skills { background: var(--bg); }
-
-        .skills-groups {
-            margin-top: 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .skill-group-label {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.35rem 0.85rem;
-            background: var(--bg-3);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-            letter-spacing: 0.01em;
-            transition: border-color 0.2s, color 0.2s, background 0.2s;
-        }
-        .skill-tag:hover {
-            border-color: var(--accent);
-            color: var(--text);
-            background: var(--accent-glow);
-        }
-        .skill-tag .dot {
-            width: 5px; height: 5px;
-            border-radius: 50%;
-            background: var(--accent-2);
-            flex-shrink: 0;
-        }
-
-        /* ── PROJECTS ── */
-        #projects { background: var(--bg); }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-            gap: 1px;
-            margin-top: 3rem;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .project-card {
-            background: var(--bg-2);
-            padding: 2rem;
-            position: relative;
-            transition: background 0.2s;
-            text-decoration: none;
-            display: block;
-        }
-        .project-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            pointer-events: none;
-        }
-        .project-card:hover { background: var(--bg-3); }
-
-        .project-type {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.625rem;
-            letter-spacing: -0.01em;
-        }
-
-        .project-desc {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 0.4rem;
-            flex-wrap: wrap;
-        }
-        .project-tag {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            padding: 0.2rem 0.55rem;
-            background: rgba(124,106,247,0.08);
-            color: var(--accent-2);
-            border-radius: 4px;
-            letter-spacing: 0.04em;
-        }
-
-        .project-arrow {
-            position: absolute;
-            top: 1.75rem;
-            right: 1.75rem;
-            color: var(--text-dim);
-            font-size: 1rem;
-            transition: color 0.2s, transform 0.2s;
-        }
-        .project-card:hover .project-arrow { color: var(--accent-2); transform: translate(2px, -2px); }
-
-        /* ── OSS ── */
-        #oss { background: var(--bg); }
-
-        .oss-list {
-            margin-top: 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .oss-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            padding: 1.75rem 0;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .oss-item:first-child { border-top: 1px solid var(--border); }
-        .oss-item:hover { opacity: 0.85; }
-
-        .oss-icon {
-            width: 40px; height: 40px;
-            border-radius: 8px;
-            background: var(--bg-3);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.125rem;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .oss-info { flex: 1; }
-        .oss-name { font-size: 0.9375rem; font-weight: 500; color: var(--text); margin-bottom: 0.3rem; }
-        .oss-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
-
-        .oss-link {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--accent-2);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        /* ── CONTACT ── */
-        #contact {
-            background: var(--bg);
-            text-align: center;
-            padding-top: 8rem;
-            padding-bottom: 8rem;
-        }
-
-        #contact .section-label { text-align: center; }
-
-        .contact-heading {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            color: #fff;
-            margin: 0.75rem 0 1rem;
-            line-height: 1.1;
-        }
-
-        .contact-sub {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
-
-        .contact-actions {
-            display: flex;
-            gap: 0.875rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 4rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            font-size: 0.8125rem;
-            color: var(--text-dim);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-            font-family: var(--mono);
-        }
-        .social-link:hover { color: var(--text-muted); }
-
-        /* ── FOOTER ── */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 2rem clamp(1.5rem, 8vw, 8rem);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-copy {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.05em;
-        }
-
-        .footer-made {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.03em;
-        }
-        .footer-made span { color: var(--accent-2); }
-
-        /* ── ANIMATIONS ── */
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ── SCROLLBAR ── */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
-
-        /* ── SELECTION ── */
-        ::selection { background: rgba(124,106,247,0.3); color: #fff; }
-
-        /* ── MOBILE TWEAKS ── */
-        @media (max-width: 480px) {
-            .hero-actions { flex-direction: column; }
-            .btn-primary, .btn-ghost { justify-content: center; }
-        }
-    </style>
+/* ────── HERO ANIM ────── */
+.ha{opacity:0;transform:translateY(16px);animation:up .75s var(--ease) both}
+@keyframes up{to{opacity:1;transform:none}}
+.d1{animation-delay:.08s}
+.d2{animation-delay:.18s}
+.d3{animation-delay:.3s}
+.d4{animation-delay:.46s}
+.d5{animation-delay:.62s}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav>
-    <div class="nav-logo"><span>~/</span>sudarshan</div>
+  <a href="#" class="nav-logo">
+    <span class="nav-logo-dot"></span>
+    Sudarshan
+  </a>
+  <div class="nav-c">
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#oss">Open Source</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="mailto:hello@sudarshanmhasrup.com" class="nav-cta">Say hello →</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.78" y2="4.22"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
+<!-- ── HERO ── -->
 <section id="hero">
-    <div class="hero-noise"></div>
-    <p class="hero-label">Software Developer · India</p>
-    <h1 class="hero-name">Sudarshan<br/>Mhasrup</h1>
-    <p class="hero-sub">
-        I build <strong>cross-platform and native software</strong> with Kotlin and Compose Multiplatform —
-        Android, iOS, desktop, and web from a single, expressive codebase.
-    </p>
-    <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View my work ↓</a>
-        <a href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
+  <div class="hero-main">
+    <div class="hero-top">
+      <div>
+        <div class="hero-badge ha d1">
+          <span class="hero-badge-dot"></span>
+          Available for collaboration
+        </div>
+        <h1 class="hero-h1 ha d2">
+          Sudarshan<br/>
+          <span class="italic">Mhasrup</span>
+        </h1>
+      </div>
+      <div class="hero-right ha d2">
+        <div class="hero-meta">
+          Software Developer<br/>
+          Kotlin · Compose<br/>
+          India
+        </div>
+      </div>
     </div>
-    <div class="hero-scroll">scroll</div>
+    <div class="hero-desc ha d3">
+      <p class="hero-desc-text">
+        I build <strong>cross-platform and native apps</strong> using Kotlin and Compose Multiplatform —
+        targeting Android, iOS, desktop, and web from a single, expressive codebase.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-accent">See my work</a>
+        <a href="mailto:hello@sudarshanmhasrup.com" class="btn btn-ghost">Say hello →</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom ha d5">
+    <div class="hstat"><span class="hstat-n">KMP</span><span class="hstat-l">Primary stack</span></div>
+    <div class="hstat"><span class="hstat-n">2+</span><span class="hstat-l">OSS libraries</span></div>
+    <div class="hstat"><span class="hstat-n">4×</span><span class="hstat-l">Platforms targeted</span></div>
+    <div class="hstat"><span class="hstat-n">∞</span><span class="hstat-l">Lines of Kotlin</span></div>
+  </div>
 </section>
 
-<div class="divider"></div>
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Kotlin Multiplatform <span class="sep">✦</span></span>
+    <span class="marquee-item">Compose Multiplatform <span class="sep">✦</span></span>
+    <span class="marquee-item">Jetpack Compose <span class="sep">✦</span></span>
+    <span class="marquee-item">Android · iOS · Desktop · Web <span class="sep">✦</span></span>
+    <span class="marquee-item">Ktor · Spring Boot <span class="sep">✦</span></span>
+    <span class="marquee-item">Open Source <span class="sep">✦</span></span>
+    <span class="marquee-item">Kotlin Multiplatform <span class="sep">✦</span></span>
+    <span class="marquee-item">Compose Multiplatform <span class="sep">✦</span></span>
+    <span class="marquee-item">Jetpack Compose <span class="sep">✦</span></span>
+    <span class="marquee-item">Android · iOS · Desktop · Web <span class="sep">✦</span></span>
+    <span class="marquee-item">Ktor · Spring Boot <span class="sep">✦</span></span>
+    <span class="marquee-item">Open Source <span class="sep">✦</span></span>
+  </div>
+</div>
 
-<!-- ABOUT -->
-<section id="about">
-    <p class="section-label reveal">About</p>
-    <h2 class="section-title reveal">Passion turned profession</h2>
-    <div class="about-grid">
-        <div class="about-text reveal">
-            <p>
-                Hi, I'm Sudarshan — a software developer from India who fell in love with Kotlin and never looked back.
-                What began as curiosity about how software works has grown into a deep passion for writing, testing,
-                debugging, and shipping code that solves real-world problems.
-            </p>
-            <p>
-                I've dedicated myself to building native and cross-platform solutions using
-                <a href="https://kotlinlang.org" target="_blank" rel="noopener">Kotlin</a> and
-                <a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" rel="noopener">Compose Multiplatform</a>,
-                targeting Android, iOS, desktop, and web from a single codebase.
-            </p>
-            <p>
-                Beyond coding, I produce music, follow cricket passionately (MS Dhoni, forever), and believe the best
-                way to learn a technology is by building with it — no shortcuts.
-            </p>
-        </div>
-        <div class="about-facts reveal">
-            <div class="fact-row">
-                <span class="fact-label">Location</span>
-                <span class="fact-value"><span>India</span></span>
-            </div>
-            <div class="fact-row">
-                <span class="fact-label">Focus</span>
-                <span class="fact-value"><span>Kotlin Multiplatform</span></span>
-            </div>
-            <div class="fact-row">
-                <span class="fact-label">Fav IDE</span>
-                <span class="fact-value"><span>Android Studio</span> <span style="color:var(--text-dim)">/ IntelliJ</span></span>
-            </div>
-            <div class="fact-row">
-                <span class="fact-label">Fav Lang</span>
-                <span class="fact-value"><span>Kotlin</span>, obviously</span>
-            </div>
-            <div class="fact-row">
-                <span class="fact-label">Build Tool</span>
-                <span class="fact-value"><span>Gradle</span>, anytime</span>
-            </div>
-            <div class="fact-row">
-                <span class="fact-label">Beyond code</span>
-                <span class="fact-value">Music production · Cricket</span>
-            </div>
-        </div>
+<!-- ── ABOUT ── -->
+<section id="about" class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="s-eyebrow rv">About</p>
+      <h2 class="s-h2 rv">Started with curiosity,<br/><em>stayed for Kotlin.</em></h2>
     </div>
+    <div class="about-layout">
+      <div class="about-body rv">
+        <p>Hi — I'm Sudarshan, a software developer from India who fell in love with Kotlin and never looked back. What began as curiosity about how software works has grown into a genuine obsession with writing, testing, debugging, and shipping code that solves real problems.</p>
+        <p>I've dedicated myself to building native and cross-platform solutions using <a href="https://kotlinlang.org" target="_blank" rel="noopener">Kotlin</a> and <a href="https://www.jetbrains.com/lp/compose-multiplatform/" target="_blank" rel="noopener">Compose Multiplatform</a>, targeting Android, iOS, desktop, and web from a single codebase. One language. One UI toolkit. Every platform.</p>
+        <p>Beyond code, I produce music, follow cricket with an unhealthy passion (MS Dhoni, always), and believe the only real way to learn a technology is to build something with it — no shortcuts.</p>
+      </div>
+      <div class="rv">
+        <div class="fun-grid">
+          <div class="fun-card">
+            <div class="fun-card-icon">🎯</div>
+            <div class="fun-card-label">Fav language</div>
+            <div class="fun-card-val">Kotlin</div>
+          </div>
+          <div class="fun-card">
+            <div class="fun-card-icon">🛠️</div>
+            <div class="fun-card-label">Fav IDE</div>
+            <div class="fun-card-val">Android Studio <small>/ IntelliJ</small></div>
+          </div>
+          <div class="fun-card">
+            <div class="fun-card-icon">🎵</div>
+            <div class="fun-card-label">Away from code</div>
+            <div class="fun-card-val">Music production</div>
+          </div>
+          <div class="fun-card">
+            <div class="fun-card-icon">🏏</div>
+            <div class="fun-card-label">Fav cricketer</div>
+            <div class="fun-card-val">MS Dhoni</div>
+          </div>
+          <div class="fun-card">
+            <div class="fun-card-icon">⚙️</div>
+            <div class="fun-card-label">Build tool</div>
+            <div class="fun-card-val">Gradle, anytime</div>
+          </div>
+          <div class="fun-card">
+            <div class="fun-card-icon">📍</div>
+            <div class="fun-card-label">Location</div>
+            <div class="fun-card-val">India</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="divider"></div>
+<hr class="div"/>
 
-<!-- SKILLS -->
-<section id="skills">
-    <p class="section-label reveal">Technology Stack</p>
-    <h2 class="section-title reveal">Tools of the trade</h2>
-
-    <div class="skills-groups">
-        <div class="reveal">
-            <p class="skill-group-label">Mobile & Cross-Platform</p>
-            <div class="skill-tags">
-                <span class="skill-tag"><span class="dot"></span>Kotlin</span>
-                <span class="skill-tag"><span class="dot"></span>Kotlin Multiplatform</span>
-                <span class="skill-tag"><span class="dot"></span>Compose Multiplatform</span>
-                <span class="skill-tag"><span class="dot"></span>Jetpack Compose</span>
-                <span class="skill-tag"><span class="dot"></span>Swift</span>
-                <span class="skill-tag"><span class="dot"></span>SwiftUI</span>
-            </div>
-        </div>
-        <div class="reveal">
-            <p class="skill-group-label">Backend</p>
-            <div class="skill-tags">
-                <span class="skill-tag"><span class="dot"></span>Ktor</span>
-                <span class="skill-tag"><span class="dot"></span>Spring Boot</span>
-                <span class="skill-tag"><span class="dot"></span>PostgreSQL</span>
-                <span class="skill-tag"><span class="dot"></span>Firebase</span>
-            </div>
-        </div>
-        <div class="reveal">
-            <p class="skill-group-label">Tools & IDEs</p>
-            <div class="skill-tags">
-                <span class="skill-tag"><span class="dot"></span>Android Studio</span>
-                <span class="skill-tag"><span class="dot"></span>IntelliJ IDEA</span>
-                <span class="skill-tag"><span class="dot"></span>Xcode</span>
-                <span class="skill-tag"><span class="dot"></span>WebStorm</span>
-                <span class="skill-tag"><span class="dot"></span>Figma</span>
-                <span class="skill-tag"><span class="dot"></span>VS Code</span>
-                <span class="skill-tag"><span class="dot"></span>Gradle</span>
-                <span class="skill-tag"><span class="dot"></span>Postman</span>
-                <span class="skill-tag"><span class="dot"></span>Git</span>
-            </div>
-        </div>
+<!-- ── SKILLS BENTO ── -->
+<section id="skills" class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="s-eyebrow rv">Technology Stack</p>
+      <h2 class="s-h2 rv">Tools of the <em>trade</em></h2>
     </div>
+    <div class="bento">
+      <!-- Accent hero card -->
+      <div class="bcard bcard-accent b-span-5 rv">
+        <div class="bcard-label">Core stack</div>
+        <div class="bcard-title">Kotlin &amp;<br/>Compose</div>
+        <div class="bcard-body" style="margin-bottom:1rem">The language and UI toolkit that run through everything I build.</div>
+        <div class="pill-wrap">
+          <span class="pill pill-white">Kotlin</span>
+          <span class="pill pill-white">Kotlin Multiplatform</span>
+          <span class="pill pill-white">Compose Multiplatform</span>
+          <span class="pill pill-white">Jetpack Compose</span>
+        </div>
+      </div>
+
+      <!-- Number card -->
+      <div class="bcard b-span-3 rv" style="display:flex;flex-direction:column;justify-content:space-between">
+        <div class="bcard-label">Platforms</div>
+        <div class="bcard-num">4×</div>
+        <div class="bcard-body" style="margin-top:.5rem">Android, iOS, Desktop, Web — one codebase.</div>
+      </div>
+
+      <!-- iOS / native -->
+      <div class="bcard b-span-4 rv">
+        <div class="bcard-label">Native iOS</div>
+        <div class="bcard-title">Swift &amp; SwiftUI</div>
+        <div class="bcard-body">For when the platform calls for full native expression.</div>
+        <div class="pill-wrap" style="margin-top:1rem">
+          <span class="pill">Swift</span>
+          <span class="pill">SwiftUI</span>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="bcard b-span-7 rv">
+        <div class="bcard-label">Backend</div>
+        <div class="bcard-title">Server-side Kotlin</div>
+        <div class="bcard-body">From lightweight APIs with Ktor to full Spring Boot services, backed by PostgreSQL and Firebase.</div>
+        <div class="pill-wrap" style="margin-top:1rem">
+          <span class="pill">Ktor</span>
+          <span class="pill">Spring Boot</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Firebase</span>
+        </div>
+      </div>
+
+      <!-- Dark card — Tools -->
+      <div class="bcard bcard-dark b-span-5 rv">
+        <div class="bcard-label">Tools &amp; IDEs</div>
+        <div class="bcard-title" style="color:var(--bg)">My daily environment</div>
+        <div class="pill-wrap" style="margin-top:1rem">
+          <span class="pill pill-white">Android Studio</span>
+          <span class="pill pill-white">IntelliJ IDEA</span>
+          <span class="pill pill-white">Xcode</span>
+          <span class="pill pill-white">WebStorm</span>
+          <span class="pill pill-white">Figma</span>
+          <span class="pill pill-white">VS Code</span>
+          <span class="pill pill-white">Gradle</span>
+          <span class="pill pill-white">Postman</span>
+          <span class="pill pill-white">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="divider"></div>
+<hr class="div"/>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <p class="section-label reveal">Projects</p>
-    <h2 class="section-title reveal">Things I've shipped</h2>
-
-    <div class="projects-grid reveal">
-        <a class="project-card" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
-            <p class="project-type">Library · KMP</p>
-            <h3 class="project-name">Localina</h3>
-            <p class="project-desc">
-                A Kotlin Multiplatform library that enables real-time locale updates in Compose Multiplatform apps — no restart required.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">Kotlin</span>
-                <span class="project-tag">KMP</span>
-                <span class="project-tag">Compose</span>
-                <span class="project-tag">i18n</span>
-            </div>
-            <span class="project-arrow">↗</span>
-        </a>
-
-        <a class="project-card" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
-            <p class="project-type">Library · KMP</p>
-            <h3 class="project-name">Splashify</h3>
-            <p class="project-desc">
-                Effortless, fully customizable splash screens for Compose Multiplatform desktop apps. Simple API, beautiful results.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">Kotlin</span>
-                <span class="project-tag">KMP</span>
-                <span class="project-tag">Desktop</span>
-                <span class="project-tag">Compose</span>
-            </div>
-            <span class="project-arrow">↗</span>
-        </a>
-
-        <a class="project-card" href="https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin" target="_blank" rel="noopener">
-            <p class="project-type">Learning · Experiments</p>
-            <h3 class="project-name">Exploring Kotlin</h3>
-            <p class="project-desc">
-                A living repository of every experiment, snippet, and concept I've worked through while going deep on Kotlin.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">Kotlin</span>
-                <span class="project-tag">Experiments</span>
-                <span class="project-tag">Open source</span>
-            </div>
-            <span class="project-arrow">↗</span>
-        </a>
-
-        <a class="project-card" href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener">
-            <p class="project-type">Profile</p>
-            <h3 class="project-name">More on GitHub</h3>
-            <p class="project-desc">
-                Explore all my repositories, contributions, and ongoing experiments on GitHub.
-            </p>
-            <div class="project-tags">
-                <span class="project-tag">GitHub</span>
-                <span class="project-tag">Open source</span>
-            </div>
-            <span class="project-arrow">↗</span>
-        </a>
+<!-- ── WORK ── -->
+<section id="work" class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="s-eyebrow rv">Work</p>
+      <h2 class="s-h2 rv">Things I've <em>shipped</em></h2>
     </div>
+    <div class="proj-list rv">
+
+      <a class="proj-row" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
+        <span class="proj-num">01</span>
+        <div class="proj-info">
+          <div class="proj-type">Library · Kotlin Multiplatform</div>
+          <h3 class="proj-name">Localina</h3>
+          <p class="proj-desc">Real-time locale updates in Compose Multiplatform apps. No restart required — locale changes propagate instantly across the UI. Built to make i18n feel invisible.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Kotlin</span>
+            <span class="proj-tag">KMP</span>
+            <span class="proj-tag">Compose</span>
+            <span class="proj-tag">i18n</span>
+            <span class="proj-tag">Open Source</span>
+          </div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a class="proj-row" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
+        <span class="proj-num">02</span>
+        <div class="proj-info">
+          <div class="proj-type">Library · KMP Desktop</div>
+          <h3 class="proj-name">Splashify</h3>
+          <p class="proj-desc">Effortless, fully customizable splash screens for Compose Multiplatform desktop apps. A drop-in library that makes first impressions count without any boilerplate.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Kotlin</span>
+            <span class="proj-tag">KMP</span>
+            <span class="proj-tag">Desktop</span>
+            <span class="proj-tag">Compose</span>
+            <span class="proj-tag">Open Source</span>
+          </div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+      <a class="proj-row" href="https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin" target="_blank" rel="noopener">
+        <span class="proj-num">03</span>
+        <div class="proj-info">
+          <div class="proj-type">Repository · Learning in public</div>
+          <h3 class="proj-name">Exploring Kotlin</h3>
+          <p class="proj-desc">A living repository of every experiment, pattern, and concept I've worked through while going deep on Kotlin. Learning out loud, one commit at a time.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Kotlin</span>
+            <span class="proj-tag">Experiments</span>
+            <span class="proj-tag">Open Source</span>
+          </div>
+        </div>
+        <span class="proj-arrow">↗</span>
+      </a>
+
+    </div>
+  </div>
 </section>
 
-<div class="divider"></div>
+<hr class="div"/>
 
-<!-- OPEN SOURCE -->
-<section id="oss">
-    <p class="section-label reveal">Open Source</p>
-    <h2 class="section-title reveal">Built for the community</h2>
-    <p class="section-body reveal">I love creating tools that make other developers' lives easier — especially in the Kotlin and Compose ecosystem.</p>
-
-    <div class="oss-list">
-        <a class="oss-item reveal" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
-            <div class="oss-icon">🌐</div>
-            <div class="oss-info">
-                <p class="oss-name">Localina</p>
-                <p class="oss-desc">Real-time locale switching for Compose Multiplatform — supporting seamless i18n without app restarts.</p>
-            </div>
-            <div class="oss-link">github ↗</div>
-        </a>
-        <a class="oss-item reveal" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
-            <div class="oss-icon">✨</div>
-            <div class="oss-info">
-                <p class="oss-name">Splashify</p>
-                <p class="oss-desc">Drop-in customizable splash screen library for Compose Multiplatform desktop applications.</p>
-            </div>
-            <div class="oss-link">github ↗</div>
-        </a>
+<!-- ── OSS ── -->
+<section id="oss" class="sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="s-eyebrow rv">Open Source</p>
+      <h2 class="s-h2 rv">Built for the <em>community</em></h2>
+      <p class="s-sub rv">Tools that make other Kotlin developers' lives a little easier.</p>
     </div>
+    <div class="oss-grid rv">
+      <a class="oss-card" href="https://github.com/sudarshanmhasrup/localina" target="_blank" rel="noopener">
+        <div class="oss-icon">🌐</div>
+        <div class="oss-name">Localina</div>
+        <div class="oss-desc">Real-time locale switching for Compose Multiplatform. Seamless i18n that just works, without restarting your app.</div>
+        <div class="oss-footer">
+          <span class="oss-link">github.com/sudarshanmhasrup/localina</span>
+          <span class="oss-arr">↗</span>
+        </div>
+      </a>
+      <a class="oss-card" href="https://github.com/sudarshanmhasrup/splashify" target="_blank" rel="noopener">
+        <div class="oss-icon">✨</div>
+        <div class="oss-name">Splashify</div>
+        <div class="oss-desc">Customizable splash screen library for Compose Multiplatform desktop apps. Beautiful first impressions with minimal code.</div>
+        <div class="oss-footer">
+          <span class="oss-link">github.com/sudarshanmhasrup/splashify</span>
+          <span class="oss-arr">↗</span>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- CONTACT -->
+<!-- ── CONTACT ── -->
 <section id="contact">
-    <p class="section-label reveal">Contact</p>
-    <h2 class="contact-heading reveal">Let's build something.</h2>
-    <p class="contact-sub reveal">Whether it's a collaboration, a question, or just a chat about Kotlin.</p>
-    <div class="contact-actions reveal">
-        <a href="mailto:hello@sudarshanmhasrup.com" class="btn-primary">hello@sudarshanmhasrup.com →</a>
-        <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+  <div class="contact-inner">
+    <div class="contact-eyebrow rv2">Contact</div>
+    <div class="contact-h rv2">
+      Let's build<br/>
+      <em>something great.</em>
     </div>
-    <div class="social-links reveal">
-        <a href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener" class="social-link">GitHub</a>
-        <a href="https://x.com/heyysudarshan" target="_blank" rel="noopener" class="social-link">X</a>
-        <a href="https://www.instagram.com/heyysudarshan/" target="_blank" rel="noopener" class="social-link">Instagram</a>
-        <a href="https://www.threads.com/@heyysudarshan" target="_blank" rel="noopener" class="social-link">Threads</a>
-        <a href="https://discord.com/users/1395440160803651676" target="_blank" rel="noopener" class="social-link">Discord</a>
+    <div class="contact-row rv2">
+      <a href="mailto:hello@sudarshanmhasrup.com" class="contact-email">hello@sudarshanmhasrup.com</a>
+      <div class="contact-btns">
+        <a href="mailto:hello@sudarshanmhasrup.com" class="btn btn-light">Send an email</a>
+        <a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" rel="noopener" class="btn btn-ghost-light">LinkedIn →</a>
+      </div>
     </div>
+    <div class="socials rv2">
+      <a href="https://github.com/sudarshanmhasrup" target="_blank" rel="noopener" class="soc-a">GitHub</a>
+      <a href="https://x.com/heyysudarshan" target="_blank" rel="noopener" class="soc-a">X / Twitter</a>
+      <a href="https://www.instagram.com/heyysudarshan/" target="_blank" rel="noopener" class="soc-a">Instagram</a>
+      <a href="https://www.threads.com/@heyysudarshan" target="_blank" rel="noopener" class="soc-a">Threads</a>
+      <a href="https://discord.com/users/1395440160803651676" target="_blank" rel="noopener" class="soc-a">Discord</a>
+      <a href="https://www.snapchat.com/add/heyysudarshan" target="_blank" rel="noopener" class="soc-a">Snapchat</a>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p class="footer-copy">© 2026 Sudarshan Mhasrup. All rights reserved.</p>
-    <p class="footer-made">Built with <span>♥</span> and Kotlin in mind.</p>
+  <span class="f-l">© 2026 Sudarshan Mhasrup. All rights reserved.</span>
+  <span class="f-r">Built with lots of Kotlin in mind.</span>
 </footer>
 
 <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-        (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    );
-    reveals.forEach((el, i) => {
-        el.style.transitionDelay = (i % 4) * 0.08 + 's';
-        observer.observe(el);
-    });
+const html=document.documentElement;
+const btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('sm-theme');
+if(saved)html.setAttribute('data-theme',saved);
+
+btn.addEventListener('click',()=>{
+  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',next);
+  localStorage.setItem('sm-theme',next);
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const d=parseInt(el.dataset.d||0);
+      setTimeout(()=>el.classList.add('in'),d);
+      io.unobserve(el);
+    }
+  });
+},{threshold:0.06,rootMargin:'0px 0px -28px 0px'});
+
+document.querySelectorAll('.rv,.rv2').forEach((el,i)=>{
+  el.dataset.d=(i%4)*90;
+  io.observe(el);
+});
 </script>
 </body>
 </html>
