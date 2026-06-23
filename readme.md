@@ -4,7 +4,7 @@
     <source media="(prefers-color-scheme: light)" srcset="/assets/banner-light.svg" />
     <img alt="Banner" src="/assets/banner-dark.svg" />
 </picture>
-<br/><br/><br/>
+<br/><br/>
 
 ### Introduction 👋
 
