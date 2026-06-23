@@ -166,24 +166,3 @@ new technologies:
 - [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I'm absolutely in
   love with Kotlin: I think about it all the time, even in my sleep! This repository contains all the code I've written
   while learning, exploring, and experimenting with Kotlin.
-
-### Social Media
-
-If you’d like to connect with me outside GitHub, feel free to check out my other social media profiles. I regularly
-share content about mobile app development and software development over there.
-
-<a href="https://www.linkedin.com/in/sudarshanmhasrup" target="_blank" style="text-decoration:none;">
-    <img alt="LinkedIn" height="40" src="/assets/linkedin-logo.svg" />
-</a>
-
-<a href="https://www.instagram.com/heyysudarshan/" target="_blank" style="text-decoration:none;">
-    <img alt="Instagram" height="40" src="/assets/instagram-logo.svg" hspace="20" />
-</a>
-
-<a href="https://www.threads.com/@heyysudarshan" target="_blank" style="margin-right:20px;">
-    <img alt="Threads" height="40" src="/assets/threads-logo.svg" />
-</a>
-
-<a href="https://x.com/heyysudarshan" target="_blank" style="margin-right:20px;">
-    <img alt="X" height="40" src="/assets/x-logo.svg" hspace="20" />
-</a>
