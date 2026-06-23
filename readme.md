@@ -6,18 +6,7 @@
 </picture>
 <br/><br/>
 
-### Introduction 👋
-
-Hi! I’m Sudarshan, a software developer from India who fell in love with Kotlin and enjoys building cross-platform and
-native software solutions with `Kotlin` and `Compose Multiplatform`. What began as curiosity about software development
-has grown into my passion. I love writing, testing, debugging, and deploying code that solves real-world problems.
-
-I’ve dedicated myself to developing native and cross-platform software solutions, using `Kotlin` and
-`Compose Multiplatform` to focus on Android, iOS, desktop, and web from a single codebase.
-
 ### Open Source
-
-I love contributing to open-source projects and creating my own. Here are some of the open-source projects I’ve created:
 
 - [Localina](https://github.com/sudarshanmhasrup/localina): A Kotlin Multiplatform library that supports real-time
   locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
@@ -28,12 +17,7 @@ I love contributing to open-source projects and creating my own. Here are some o
 
 ### Technology Stack
 
-Do you want to know the technology stack I use for writing and developing software? Don’t worry, I’ve got you covered.
-Here’s the list of technologies I use in my daily developer life.
-
 #### Mobile App Development
-
-Here are the technologies I use to build cross-platform and native mobile apps.
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/kotlin-multiplatform-logo-dark.svg" />
@@ -73,8 +57,6 @@ Here are the technologies I use to build cross-platform and native mobile apps.
 
 #### Backend Development
 
-These are the technologies I use to build backend services.
-
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/ktor-logo-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="/assets/ktor-logo-light.svg" />
@@ -100,8 +82,6 @@ These are the technologies I use to build backend services.
 </picture>
 
 #### Tools and IDEs
-
-Here are the tools and IDEs I use to build and test software.
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/assets/android-studio-logo-dark.svg" />
