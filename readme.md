@@ -156,13 +156,3 @@ Here are the tools and IDEs I use to build and test software.
     <source media="(prefers-color-scheme: light)" srcset="/assets/git-logo-light.svg" />
     <img alt="Git" height="88" src="/assets/git-logo-dark.svg">
 </picture>
-
-### Learn and Fun
-
-The best way to learn a new technology is by experimenting with it. Whenever I learn something new, I create a dedicated
-repository for experimenting with that technology. Here’s the list of all the repositories I’ve created while learning
-new technologies:
-
-- [Exploring the world of Kotlin](https://github.com/sudarshanmhasrup/exploring-the-world-of-kotlin): I'm absolutely in
-  love with Kotlin: I think about it all the time, even in my sleep! This repository contains all the code I've written
-  while learning, exploring, and experimenting with Kotlin.
