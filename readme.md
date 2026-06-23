@@ -9,11 +9,9 @@
 ### Open Source
 
 - [Localina](https://github.com/sudarshanmhasrup/localina): A Kotlin Multiplatform library that supports real-time
-  locale updates in your Compose Multiplatform app. I created this library to make it easier to work with Compose
-  Multiplatform and handle locale changes seamlessly.
+  locale updates in your Compose Multiplatform app.
 - [Splashify](https://github.com/sudarshanmhasrup/splashify): A Kotlin Multiplatform library for effortless,
-  customizable splash screens in Compose Multiplatform desktop apps. I created this library to help simplify splash
-  screen implementation in Compose Multiplatform desktop apps.
+  customizable splash screens in Compose Multiplatform desktop apps.
 
 ### Technology Stack
 
